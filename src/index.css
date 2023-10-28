@@ -1,13 +1,166 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('./styles/normalize.css');
+
+@font-face {
+  font-family: 'satoshi-reg';
+  src: url('./assets/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.ttf');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'adine-kirnberg';
+  src: url('./assets/fonts/adine-kirnberg/Adine\ Kirnberg.ttf');
+}
+
+:root {
+  font-size: 18px;
+  font-family: satoshi-reg,'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  background-color: #1E1E1E;
+  color: #fff;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  width: 35vw;
+  max-width: 650px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+.logo {
+  width: 10rem;
+  height: 10rem;
+  background-image: url('./assets/images/logo_b.PNG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 50%;
+}
+.nav_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 8rem;
+}
+.nav_link {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav_current {
+  background-color: #fff;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  margin-right: .5rem;
+}
+/* HOME */
+.home_main {
+  width: 65vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.image_container {
+  width: 80%;
+  height: 80%;
+  position: relative;
+}
+.image_cover {
+  width: 100%;
+  height: 100%;
+  min-height: 30rem;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  background: radial-gradient( rgba(30, 30, 30, 0), rgba(30, 30, 30, 1));
+  /* background-position: 0 10%; */
+  font-family: adine-kirnberg;
+  font-size: 12rem;
+  line-height: 1;
+}
+/* .image_cover_top {
+  background: linear-gradient(to top, rgba(30, 30, 30, 0), rgba(30, 30, 30, 1));
+  background-position: 0, 95%;
+}
+.image_cover_right {
+  background: linear-gradient(to right, rgba(30, 30, 30, 0), rgba(30, 30, 30, 1));
+  background-position: 5% 0;
+}
+.image_cover_bottom {
+  background: linear-gradient(to bottom, rgba(30, 30, 30, 0), rgba(30, 30, 30, 1));
+  background-position: 0 5%;
+}
+.image_cover_left {
+  background: linear-gradient(to left, rgba(30, 30, 30, 0), rgba(30, 30, 30, 1));
+  background-position: 95% 0;
+} */
+.image_box {
+  width: 100%;
+  height: 100%;
+  min-height: 30rem;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition-duration: 2s;
+}
+#image_1 {
+  background-image: url('../src/assets/images/beer_factory.jpg');
+}
+#image_2 {
+  background-image: url('../src/assets/images/molt.jpg');
+}
+#image_3 {
+  background-image: url('../src/assets/images/distillery.jpg');
+}
+.image_show {
+  opacity: 1;
+  transition-duration: 2s;
+}
+
+.image_navi_container {
+  width: 100%;
+  height: 3.4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.image_navi {
+  width: .6rem;
+  height: .6rem;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 1rem .5rem;
+}
+.image_navi:hover {
+  cursor: pointer;
+  width: .7rem;
+  height: .7rem;
+  background-color: #918b87;
+  transition-duration: .3;
+}
+.select_image {
+  background-color: pink;
 }
