@@ -1,0 +1,17 @@
+.image-box_supports {
+  background-image: url("../../assets/images/image_1.png");
+}
+.copy-container_supports {
+  font-family: satoshi-reg;
+  text-align: left;
+  height: 100%;
+}
+.copy-container_supports h2 {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+.copy-container_supports li {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-left: 1rem;
+}

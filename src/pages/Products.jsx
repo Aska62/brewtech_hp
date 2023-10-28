@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -8,14 +7,14 @@ function Products() {
       <Navbar currentPage={'products'} />
 
       <main className="main">
-        <div className="products-image-container">
+        <div className="image-container">
           <div className="image-cover image-cover_products">
-            <div className="products-copy-container">
+            <div className="copy-container">
               <p className="products-copy" id="products-copy_1"><span>Malting Garage </span><br />- Ibaraki, Japan</p>
-              <p className="products-copy" id="products-copy_2">Lots of great things are produced in a garage.</p>
+              <p className="products-copy" id="products-copy_2">Lots of great things are <br />produced in a garage.</p>
             </div>
           </div>
-          <div className="garage_image"></div>
+          <div className="image-box image-container_garage"></div>
         </div>
         <table className="table_products">
           <thead>
