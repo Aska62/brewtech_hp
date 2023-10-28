@@ -1,7 +1,20 @@
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function Contact() {
   return (
-    <div>contact</div>
+    <>
+      <Navbar currentPage={'contact'} />
+        <main className="main">
+          <div className="image-container">
+            <div className="image-cover image-cover_products">
+              <div>contact</div>
+            </div>
+            <div className="image-box image-box_contact"></div>
+          </div>
+        </main>
+      <Footer />
+    </>
   )
 }
 
