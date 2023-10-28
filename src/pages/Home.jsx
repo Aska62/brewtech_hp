@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function Home() {
   const [imageDisp, setImageDisp] = useState(1);
@@ -33,13 +34,13 @@ function Home() {
     setCount(1)
   }
 
-
   return (
-    <div className="main_container">
+    <>
       <Navbar currentPage={'home'} />
-      <main className="home_main">
+
+      <main className="main">
         <div className="image_container">
-          <div className="image_cover image_cover_top">
+          <div className="image-cover image-cover_home">
             <h2 className="home-heading" id="home-heading_1">Nature</h2>
             <h2 className="home-heading" id="home-heading_2">Science</h2>
             <h2 className="home-heading" id="home-heading_3">Future</h2>
@@ -56,7 +57,9 @@ function Home() {
           <div className={`image_navi image_navi_3 ${imageDisp === 3 ? 'select_image':''}`} onClick={()=>onPhotoNaviClick(3)}></div>
         </div>
       </main>
-    </div>
+
+      <Footer />
+    </>
   )
 }
 

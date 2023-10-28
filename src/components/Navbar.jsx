@@ -4,7 +4,7 @@ function Navbar({currentPage}) {
 
   return (
     <section className='navbar'>
-      <div className="logo" alt='logo' width="500" height="600"></div>
+      <a href="/" className="logo" alt='logo' width="500" height="600"></a>
       <div className="nav_box">
         <a href="/" className={`nav_link`}>
           <div className='nav_current' style={{opacity: (currentPage === 'home') ? 1:0}}></div>
