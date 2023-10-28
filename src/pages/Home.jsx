@@ -18,15 +18,20 @@ function Home() {
     }
   }, [count]);
 
+  // Rotate images to display
   const imageRotate = (count) => {
-    console.log(count);
     if (imageDisp === 3) {
-      console.log('3dayo')
       setImageDisp(1);
     } else {
       setImageDisp(imageDisp+1);
     }
   };
+
+  // Click photo navigation to change photos to display
+  const onPhotoNaviClick = (photoId) => {
+    setImageDisp(photoId);
+    setCount(1)
+  }
 
 
   return (
@@ -35,11 +40,10 @@ function Home() {
       <main className="home_main">
         <div className="image_container">
           <div className="image_cover image_cover_top">
-            Environment, Science, Future
+            <h2 className="home-heading" id="home-heading_1">Nature</h2>
+            <h2 className="home-heading" id="home-heading_2">Science</h2>
+            <h2 className="home-heading" id="home-heading_3">Future</h2>
           </div>
-          {/* <div className="image_cover image_cover_right"></div>
-          <div className="image_cover image_cover_bottom"></div>
-          <div className="image_cover image_cover_left"></div> */}
           <div className="image_box">
             <div className={`image ${imageDisp === 1 ? 'image_show':''}`} id="image_1"></div>
             <div className={`image ${imageDisp === 2 ? 'image_show':''}`} id="image_2"></div>
@@ -47,9 +51,9 @@ function Home() {
           </div>
         </div>
         <div className="image_navi_container">
-          <div className={`image_navi image_navi_1 ${imageDisp === 1 ? 'select_image':''}`}></div>
-          <div className={`image_navi image_navi_2 ${imageDisp === 2 ? 'select_image':''}`}></div>
-          <div className={`image_navi image_navi_3 ${imageDisp === 3 ? 'select_image':''}`}></div>
+          <div className={`image_navi image_navi_1 ${imageDisp === 1 ? 'select_image':''}`} onClick={()=>onPhotoNaviClick(1)}></div>
+          <div className={`image_navi image_navi_2 ${imageDisp === 2 ? 'select_image':''}`} onClick={()=>onPhotoNaviClick(2)}></div>
+          <div className={`image_navi image_navi_3 ${imageDisp === 3 ? 'select_image':''}`} onClick={()=>onPhotoNaviClick(3)}></div>
         </div>
       </main>
     </div>
