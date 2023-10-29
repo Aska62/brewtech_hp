@@ -26,7 +26,6 @@
 }
 
 /* TABLE */
-
 .table_products {
   position: absolute;
   top: 56%;
@@ -47,6 +46,35 @@
 }
 .table_products th {
   font-weight: lighter;
+}
+
+/* Mobile */
+@media only screen and (max-width:620px) {
+  .products-copy {
+    width: 100%;
+    margin: 0 .7rem 1rem auto;
+    line-height: 1.2;
+  }
+  #products-copy_1 {
+    font-size: 1.8rem;
+    margin-top: -2rem;
+  }
+  #products-copy_1 span {
+    font-size: 2rem;
+    margin-right: 3rem;
+  }
+  #products-copy_2 {
+    font-size: 1.6rem;
+    animation: fadeInAnimation2 ease 6s;
+  }
+  .table_products {
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+  .table_products {
+    height: 7rem;
+    width: 90%;
+  }
 }
 
 @keyframes slideInFromRight {

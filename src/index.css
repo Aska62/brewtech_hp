@@ -26,7 +26,7 @@ li {
 }
 /* Navbar */
 .navbar {
-  width: 35vw;
+  width: 20vw;
   max-width: 650px;
   height: 100vh;
   display: flex;
@@ -151,7 +151,7 @@ li {
 
 /* MAIN */
 .main {
-  width: 65vw;
+  width: 80vw;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -184,6 +184,8 @@ footer {
   line-height: 1.8rem;
   color: rgb(150, 150, 150);
 }
+
+/* MAIN */
 .image-container {
   width: 90%;
   height: 70%;
@@ -235,7 +237,19 @@ footer {
   }
 }
 
-@media only screen and (max-width:576px) {
+/* Tablet */
+@media only screen and (max-width:890px) {
+  .navbar {
+    width: 30vw;
+  }
+  .main {
+    width: 70vw;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width:620px) {
+  /* NAV BAR */
   .navbar {
     width: 100vw;
     height: 5rem;
@@ -259,21 +273,30 @@ footer {
     display: block;
   }
 
+  /* MENU */
   .menu-container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
+  /* MAIN */
   .main {
     width: 100vw;
-    height: 125vw;
-    overflow-x: clip;
+    height: calc(100vh - 5rem);
+    overflow-x: hidden;
     position: unset;
     top: unset;
     right: unset;
     z-index: 0;
   }
+  .image-container {
+    margin-top: -2rem;
+  }
+  .copy-container {
+    top: unset;
+  }
+
 }
 
 @import url('./styles/pages/home.css');

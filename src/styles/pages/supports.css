@@ -2,7 +2,7 @@
   background-image: url("../../assets/images/image_1.png");
 }
 .copy-container_supports {
-  font-style:normal;
+  font-style: normal;
   font-weight: lighter;
   text-align: left;
   height: 100%;
@@ -15,4 +15,19 @@
   font-size: 1.4rem;
   line-height: 1.5;
   margin-left: 1rem;
+}
+
+/* Mobile */
+@media only screen and (max-width:576px) {
+  .copy-container_supports {
+    /* top: calc(-1rem); */
+    bottom: 9rem;
+  }
+  .copy-container_supports h2 {
+    font-size: 1.1rem;
+  }
+  .copy-container_supports li {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
 }
