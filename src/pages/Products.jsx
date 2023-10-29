@@ -11,7 +11,7 @@ function Products() {
           <div className="image-cover image-cover_products">
             <div className="copy-container">
               <p className="products-copy" id="products-copy_1"><span>Malting Garage </span><br />- Ibaraki, Japan</p>
-              <p className="products-copy" id="products-copy_2">Lots of great things are <br />produced in a garage.</p>
+              <p className="products-copy" id="products-copy_2">Lots of great things<br />starts from a garage.</p>
             </div>
           </div>
           <div className="image-box image-container_garage"></div>
