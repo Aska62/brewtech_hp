@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 function Contact() {
   return (
     <>
-      <Navbar currentPage={'contact'} />
+      <Navbar currentPage={'contact'} logoType={'logo_b'} />
         <main className="main">
           <div className="image-container">
             <div className="image-cover image-cover_products">

@@ -36,19 +36,32 @@ function Home() {
 
   return (
     <>
-      <Navbar currentPage={'home'} />
+      <Navbar currentPage={'home'} logoType={'logo_b'} />
 
       <main className="main">
-        <div className="image_container">
+        <div className="image-container">
           <div className="image-cover image-cover_home">
-            <h2 className="home-heading" id="home-heading_1">Nature</h2>
-            <h2 className="home-heading" id="home-heading_2">Science</h2>
-            <h2 className="home-heading" id="home-heading_3">Future</h2>
+            <div className="home-heading_wrapper">
+              <h2 className="home-heading" id="home-heading_1">Nature,</h2>
+              <h2 className="home-heading" id="home-heading_2">Science,</h2>
+              <h2 className="home-heading" id="home-heading_3">Future</h2>
+            </div>
           </div>
-          <div className="image_box">
-            <div className={`image ${imageDisp === 1 ? 'image_show':''}`} id="image_1"></div>
-            <div className={`image ${imageDisp === 2 ? 'image_show':''}`} id="image_2"></div>
-            <div className={`image ${imageDisp === 3 ? 'image_show':''}`} id="image_3"></div>
+          <div className="image-slider-container">
+            <div
+              className={`image-box image-box_home ${imageDisp === 1 ? 'image_show':''}`}
+              id="image_1">
+              </div>
+            <div
+              className={`image-box image-box_home ${imageDisp === 2 ? 'image_show':''}`}
+              id="image_2"
+              >
+            </div>
+            <div
+              className={`image-box image-box_home ${imageDisp === 3 ? 'image_show':''}`}
+              id="image_3"
+              >
+            </div>
           </div>
         </div>
         <div className="image_navi_container">

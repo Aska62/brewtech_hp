@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 function Supports() {
   return (
     <>
-    <Navbar currentPage={'supports'} />
+    <Navbar currentPage={'supports'} logoType={'logo_w'} />
 
     <main className="main">
       <div className="image-container">

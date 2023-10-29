@@ -1,13 +1,13 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 
-function Navbar({currentPage}) {
+function Navbar({currentPage, logoType}) {
 
   return (
     <section className='navbar'>
-      <a href="/" className="logo" alt='logo' width="500" height="600"></a>
+      <a href="/" className={`logo ${logoType}`} alt='logo' width="500" height="600"></a>
       <div className="nav_box">
         <a href="/" className={`nav_link`}>
-          <div className='nav_current' style={{opacity: (currentPage === 'home') ? 1:0}}></div>
+          <div className="nav_current" style={{opacity: (currentPage === 'home') ? 1:0}}></div>
           Home
         </a>
         <a href="/products" className="nav_link">

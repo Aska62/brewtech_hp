@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 function Products() {
   return (
     <>
-      <Navbar currentPage={'products'} />
+      <Navbar currentPage={'products'} logoType={'logo_r'} />
 
       <main className="main">
         <div className="image-container">

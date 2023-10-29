@@ -2,7 +2,8 @@
   background-image: url("../../assets/images/image_1.png");
 }
 .copy-container_supports {
-  font-family: satoshi-reg;
+  font-style:normal;
+  font-weight: lighter;
   text-align: left;
   height: 100%;
 }
