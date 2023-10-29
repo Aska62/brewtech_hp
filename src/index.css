@@ -50,13 +50,13 @@ li {
   cursor: pointer;
 }
 .logo_b {
-  background-image: url('./assets/images/logo_b.png');
+  background-image: url('./assets/images/logo/logo_b.png');
 }
 .logo_r {
-  background-image: url('./assets/images/logo_r.png');
+  background-image: url('./assets/images/logo/logo_r.png');
 }
 .logo_w {
-  background-image: url('./assets/images/logo_w.png');
+  background-image: url('./assets/images/logo/logo_w.png');
 }
 
 /* MENU */
