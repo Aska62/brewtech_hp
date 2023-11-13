@@ -36,7 +36,7 @@ function Home() {
 
   return (
     <>
-      <Navbar currentPage={'home'} logoType={'logo_b'} />
+      <Navbar currentPage={'home'} logoType={'logo_bt'} />
 
       <main className="main">
         <div className="image-container">

@@ -38,7 +38,7 @@ li {
 /* LOGO */
 .logo {
   width: 10rem;
-  height: 10rem;
+  height: 8rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -49,14 +49,8 @@ li {
 .logo:hover {
   cursor: pointer;
 }
-.logo_b {
-  background-image: url('./assets/images/logo/logo_b.png');
-}
-.logo_r {
-  background-image: url('./assets/images/logo/logo_r.png');
-}
-.logo_w {
-  background-image: url('./assets/images/logo/logo_w.png');
+.logo_bt {
+  background-image: url('./assets/images/logo/logo_bt.png');
 }
 
 /* MENU */
@@ -264,10 +258,11 @@ footer {
     display: none;
   }
   .logo {
-    width: 5rem;
+    width: 7rem;
     height: 5rem;
     position: unset;
     z-index: 2;
+    margin: .3rem 0 0 .5rem;
   }
   .hamburger-container {
     display: block;
