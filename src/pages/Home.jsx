@@ -70,9 +70,7 @@ function Home() {
     }
 
     setStartX(0);
-    setStartY(0);
     setEndX(0);
-    setEndY(0);
   };
 
   return (
