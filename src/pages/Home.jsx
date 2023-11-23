@@ -1,8 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import LangBar from "../components/LangBar";
+import LanguageContext from "../context/LanguageContext";
 
 function Home() {
+  const { language } = useContext(LanguageContext);
+
   const [imageDisp, setImageDisp] = useState(1);
   const [count, setCount] = useState(0);
   const [delay, setDelay] = useState(1000);
@@ -20,6 +24,8 @@ function Home() {
       }
     }
   }, [count]);
+
+  let languageSetting = language;
 
   // Rotate images to display
   const imageRotate = (count) => {
@@ -76,7 +82,7 @@ function Home() {
   return (
     <>
       <Navbar currentPage={'home'} logoType={'logo_bt'} />
-
+      <LangBar />
       <main className="main">
         <div className="image-container">
           <div className="image-cover image-cover_home"
@@ -113,7 +119,6 @@ function Home() {
           <div className={`image_navi image_navi_3 ${imageDisp === 3 ? 'select_image':''}`} onClick={()=>onPhotoNaviClick(3)}></div>
         </div>
       </main>
-
       <Footer />
     </>
   )

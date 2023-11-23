@@ -1,11 +1,12 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import LangBar from "../components/LangBar";
 
 function Supports() {
   return (
     <>
     <Navbar currentPage={'supports'} logoType={'logo_bt'} />
-
+    <LangBar />
     <main className="main">
       <div className="image-container">
         <div className="image-cover image-cover_products">
