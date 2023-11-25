@@ -42,14 +42,14 @@ function Products() {
                     <td>5.0% max</td>
                     <td>3-5</td>
                     <td></td>
-                    <td>600-650</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td className="product-table_td_jp">ライト・ピーテッド・モルト</td>
                     <td>5.0% max</td>
                     <td>3-5</td>
                     <td>5-15</td>
-                    <td>1100-1500</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td className="product-table_td_jp">ビール用</td>
@@ -57,7 +57,7 @@ function Products() {
                     <td>5.0% max</td>
                     <td>3-5</td>
                     <td></td>
-                    <td>600-650</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td rowSpan="2">OEM</td>
@@ -65,14 +65,14 @@ function Products() {
                     <td>5.0% max</td>
                     <td>3-10</td>
                     <td></td>
-                    <td>500-600</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td className="product-table_td_jp">オーダーメイド・スモーク・モルト</td>
                     <td>5.0% max</td>
                     <td>3-10</td>
                     <td>5-15</td>
-                    <td>1050-2000</td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
@@ -117,14 +117,14 @@ function Products() {
                     <td>5.0% max</td>
                     <td>3-5</td>
                     <td></td>
-                    <td>600-650</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>轻度泥煤麦芽</td>
                     <td>5.0% max</td>
                     <td>3-5</td>
                     <td>5-15</td>
-                    <td>1100-1500</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>啤酒用</td>
@@ -132,7 +132,7 @@ function Products() {
                     <td>5.0% max</td>
                     <td>3-5</td>
                     <td></td>
-                    <td>600-650</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td rowSpan="2">OEM</td>
@@ -140,14 +140,14 @@ function Products() {
                     <td>5.0% max</td>
                     <td>3-10</td>
                     <td></td>
-                    <td>500-600</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>接受定制-烟熏麦芽</td>
                     <td>5.0% max</td>
                     <td>3-10</td>
                     <td>5-15</td>
-                    <td>1050-2000</td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
@@ -192,7 +192,7 @@ function Products() {
                   <td>5.0% max</td>
                   <td>3-5</td>
                   <td></td>
-                  <td>600-650</td>
+                  <td></td>
 
                 </tr>
                 <tr>
@@ -200,7 +200,7 @@ function Products() {
                   <td>5.0% max</td>
                   <td>3-5</td>
                   <td>5-15</td>
-                  <td>1100-1500</td>
+                  <td></td>
                 </tr>
                 <tr>
                   <td>Beer Material</td>
@@ -208,7 +208,7 @@ function Products() {
                   <td>5.0% max</td>
                   <td>3-5</td>
                   <td></td>
-                  <td>600-650</td>
+                  <td></td>
                 </tr>
                 <tr>
                   <td rowSpan="2">OEM</td>
@@ -216,14 +216,14 @@ function Products() {
                   <td>5.0% max</td>
                   <td>3-10</td>
                   <td></td>
-                  <td>500-600</td>
+                  <td></td>
                 </tr>
                 <tr>
                   <td>Customization-Smoked Malt</td>
                   <td>5.0% max</td>
                   <td>3-10</td>
                   <td>5-15</td>
-                  <td>1050-2000</td>
+                  <td></td>
                 </tr>
               </tbody>
             </table>

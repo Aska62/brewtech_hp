@@ -65,7 +65,7 @@
   font-size: .8rem;
 }
 
-/* TAblet TODO:*/
+/* Tablet*/
 @media only screen and (max-width:890px) {
   .table-container {
     height: 300px;
