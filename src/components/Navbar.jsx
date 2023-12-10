@@ -24,9 +24,9 @@ function Navbar({currentPage, logoType}) {
           <div className='nav_current' style={{opacity: currentPage == 'supports' ? 1:0}}></div>
           Supports
         </a>
-        <a href="/contact" className="nav_link">
-          <div className='nav_current' style={{opacity: currentPage == 'contact' ? 1:0}}></div>
-          Contact
+        <a href="/info" className="nav_link">
+          <div className='nav_current' style={{opacity: currentPage == 'info' ? 1:0}}></div>
+          Info
         </a>
       </div>
 
@@ -51,9 +51,9 @@ function Navbar({currentPage, logoType}) {
           <div className='nav_current' style={{opacity: currentPage == 'supports' ? 1:0}}></div>
           Supports
         </a>
-        <a href="/contact" className={`menu_link`}>
-          <div className='nav_current' style={{opacity: currentPage == 'contact' ? 1:0}}></div>
-          Contact
+        <a href="/info" className={`menu_link`}>
+          <div className='nav_current' style={{opacity: currentPage == 'info' ? 1:0}}></div>
+          Info
         </a>
       </div>
     </section>

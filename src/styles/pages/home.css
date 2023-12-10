@@ -1,14 +1,18 @@
+.image-container_home {
+  height: calc(100% - 3.4rem);
+}
+
 .image-cover_home {
   font-size: 3.2rem;
   text-align: center;
 }
 
-/* HEADING */
+/* Heading */
 .home-heading_wrapper {
   width: 100%;
   max-width: 550px;
   height: fit-content;
-  margin: 8% auto 0 auto;
+  margin: 14% auto 0 auto;
 }
 .home-heading {
   margin: 0;
@@ -83,4 +87,14 @@
 }
 .select_image {
   background-color: rgba(235, 232, 232, .8);
+}
+
+/* Mobile */
+@media only screen and (max-width:620px) {
+  .image_navi_container {
+    height: 2rem;
+  }
+  .image_navi {
+    margin-bottom: 0rem;
+  }
 }

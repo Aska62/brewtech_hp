@@ -1,0 +1,10 @@
+.image-cover_info h2 {
+  margin: 3rem auto 2rem 2rem;
+  font-size: 2rem;
+}
+.info-wrapper {
+  width: fit-content;
+  margin: 5rem auto;
+  font-style: normal;
+  font-weight: 360;
+}

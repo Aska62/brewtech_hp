@@ -1,21 +1,20 @@
 @import url('./styles/normalize.css');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,500;0,600;1,300&family=M+PLUS+1p:wght@700;900&family=Ubuntu:wght@400;500&display=swap');
 @font-face {
-  font-family: 'satoshi-reg';
-  src: url('./assets/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.ttf');
+  font-family: Noto Sans JP;
+  src: url('../src/assets/fonts/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf');
 }
 @font-face {
-  font-family: 'abri-fatface';
-  src: url('./assets/fonts/AbrilFatface-Regular.ttf');
+  font-family: Quintessential;
+  src: url('../src/assets/fonts/Quintessential/Quintessential-Regular.ttf');
 }
 
 :root {
   font-size: 18px;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-weight: lighter;
   background-color: #1E1E1E;
   color: #fff;
-  --products-table-width: 80%;
+  --products-table-width: 96%;
 }
 a {
   color: #fff;
@@ -24,9 +23,18 @@ a {
 li {
   list-style-type: none;
 }
-/* Navbar */
+.li_bullet {
+  list-style-type: disc;
+}
+.style-font {
+  font-family: 'Quintessential', serif;
+  font-weight: lighter;
+}
+
+/* NAVBAR */
 .navbar {
-  width: 20vw;
+  width: 24vw;
+  min-width: 244px;
   max-width: 650px;
   height: 100vh;
   display: flex;
@@ -35,7 +43,7 @@ li {
   justify-content: center;
 }
 
-/* LOGO */
+/* Logo */
 .logo {
   width: 10rem;
   height: 8rem;
@@ -143,17 +151,65 @@ li {
   opacity: .8;
 }
 
-/* MAIN */
-.main {
-  width: 80vw;
-  height: 100vh;
+/* MAIN PART */
+.main-container {
+  width:  76vw;
+  max-width: calc(100vw - 244px);
+  height: calc(100vh - 2rem);
+  overflow-y: scroll;
   position: fixed;
   top: 0;
   right: 0;
+}
+
+/* Language Bar */
+.language-bar {
+  width: 100%;
+  height: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 3;
+  margin: .5rem 0 1rem 0;
+}
+.lang-btn {
+  width: 1.2rem;
+  height: 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  border: 0.5px solid rgba(255, 255, 255, .7);
+  margin: 2px;
+}
+.lang-btn:last-of-type {
+  margin-right: 8px;
+}
+.lang-btn:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, .3);
+}
+.lang-btn_selected {
+  color: rgba(255, 255, 255, .6);
+}
+/* Main Part */
+.main {
+  width: 100%;
+  height: calc(100% - 5rem);
+  min-height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  /* position: relative; */
+  /* background-color: blueviolet; */
+}
+
+/* Main Container */
+.image-container {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
 }
 .image-cover {
   width: 100%;
@@ -162,28 +218,9 @@ li {
   position: absolute;
   top: 0;
   background: radial-gradient( rgba(30, 30, 30, 0), rgba(30, 30, 30, 1));
-  font-family: 'Fira Sans', sans-serif;
   font-style: italic;
   color: rgba(255, 255, 255, .7);
   line-height: 1;
-}
-
-/* FOOTER */
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  font-size: .8rem;
-  line-height: 1.8rem;
-  color: rgb(150, 150, 150);
-}
-
-/* MAIN */
-.image-container {
-  width: 90%;
-  height: 70%;
-  position: relative;
 }
 .image-box {
   width: 100%;
@@ -194,34 +231,23 @@ footer {
 }
 .copy-container {
   width: 100%;
-  height: 70%;
+  height: 100%;
   position: absolute;
   top: 0;
   background: linear-gradient( rgba(30, 30, 30, 1), rgba(30, 30, 30, .1));
 }
 
-/* LANGUAGE BAR */
-.language-bar {
-  width: 4rem;
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  display: flex;
-  justify-content: space-between;
-  z-index: 3;
-}
-.lang-btn {
-  width: 1.2rem;
-  font-size: 0.8rem;
+/* FOOTER */
+footer {
+  width: 100vw;
+  height: 2rem;
   text-align: center;
-  border: 0.5px solid rgba(255, 255, 255, .7);
-}
-.lang-btn:hover {
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, .3);
-}
-.lang-btn_selected {
- color: rgba(255, 255, 255, .6);
+  font-size: .8rem;
+  line-height: 1.8rem;
+  color: rgb(150, 150, 150);
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
 
 @keyframes fadeInAnimation {
@@ -260,7 +286,7 @@ footer {
   .navbar {
     width: 30vw;
   }
-  .main {
+  .main-container {
     width: 70vw;
   }
   .language-bar {
@@ -274,8 +300,6 @@ footer {
   .navbar {
     width: 100vw;
     height: 5rem;
-    overflow-x: hidden;
-    overflow-y: visible;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -303,25 +327,40 @@ footer {
   }
 
   /* MAIN */
-  .main {
+  .main-container {
     width: 100vw;
+    max-width: unset;
     height: calc(100vh - 5rem);
     overflow-x: hidden;
-    position: unset;
-    top: unset;
+    top: 5rem;
     right: unset;
     z-index: 0;
   }
+  .main {
+    width: 100%;
+  }
   .image-container {
+    width: 90%;
+    height: calc(100vh - 10rem);
     margin-top: -2rem;
   }
   .copy-container {
     top: unset;
   }
+  .language-bar {
+    position: fixed;
+    top: 0;
+    width: fit-content;
+  }
 
+  footer {
+    position: unset;
+    margin-bottom: 0;
+  }
 }
 
 @import url('./styles/pages/home.css');
 @import url('./styles/pages/products.css');
 @import url('./styles/pages/supports.css');
 @import url('./styles/pages/contact.css');
+@import url('./styles/pages/info.css');

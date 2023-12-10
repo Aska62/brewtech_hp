@@ -1,26 +1,118 @@
 .image-box_supports {
   background-image: url("../../assets/images/image_1.png");
 }
-.copy-container_supports {
-  font-style: normal;
-  font-weight: lighter;
-  text-align: left;
+.main-container_supports {
+  width: 80%;
+  max-width: 800px;
   height: 100%;
+  text-align: left;
+  margin: 0 auto;
 }
-.copy-container_supports h2 {
+.note_supports {
+  font-style: normal;
+  line-height: 1.3rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.main-container_supports ul {
+  padding: 0;
+  font-style: normal;
+}
+.copy-container_supports .li_bullet {
+  margin-left: 3rem;
+}
+
+.supports-h2_jp {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+.note_supports_jp {
+  font-size: 0.8rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-top: 1rem;
+}
+.supports-h3_jp {
+  font-size: 1.3rem;
+  line-height: 1;
+  font-style: normal;
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.supports-li_jp {
+  font-size: 1rem;
+  font-weight: 360;
+  line-height: 1.6rem;
+  margin-left: 1rem;
+}
+.supports_ul_p_jp {
+  font-size: 1rem;
+  font-weight: 360;
+  line-height: 1.5rem;
+  margin: 0.5rem 0 0.2rem 1rem;
+}
+
+.supports-h2_en {
+  font-size: 3rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+.supports-h3_en {
   font-size: 1.6rem;
   line-height: 1;
+  font-style: normal;
+  margin-bottom: 0.5rem;
 }
-.copy-container_supports li {
-  font-size: 1.4rem;
+.supports-li_en {
+  font-size: 1.2rem;
+  font-weight: 360;
   line-height: 1.5;
   margin-left: 1rem;
+}
+.supports_ul_p_en {
+  font-size: 1.2rem;
+  font-weight: 360;
+  line-height: 1.5rem;
+  margin: 0.5rem 0 0.5rem 1rem;
+}
+
+.note_supports_cn {
+  font-size: 0.8rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-top: 1rem;
+}
+.supports-h3_cn {
+  font-size: 1.3rem;
+  line-height: 1;
+  font-style: normal;
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.supports-li_cn {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  margin-left: 1rem;
+}
+.supports_ul_p_cn {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 0.5rem 0 0.2rem 1rem;
+}
+
+/* Tablet*/
+@media only screen and (max-width:890px) {
+  .main-container_supports .note_supports {
+    margin-bottom: 5rem;
+  }
 }
 
 /* Mobile */
 @media only screen and (max-width:576px) {
   .copy-container_supports {
-    /* top: calc(-1rem); */
     bottom: 9rem;
   }
   .copy-container_supports h2 {

@@ -82,44 +82,46 @@ function Home() {
   return (
     <>
       <Navbar currentPage={'home'} logoType={'logo_bt'} />
-      <LangBar />
-      <main className="main">
-        <div className="image-container">
-          <div className="image-cover image-cover_home"
-            onTouchStart={e => onTouchStart(e)}
-            onTouchMove={e => onTouchMove(e)}
-            onTouchEnd={onTouchEnd}
-            >
-            <div className="home-heading_wrapper">
-              <h2 className="home-heading" id="home-heading_1">Nature,</h2>
-              <h2 className="home-heading" id="home-heading_2">Science,</h2>
-              <h2 className="home-heading" id="home-heading_3">Future</h2>
+      <div className="main-container">
+        <LangBar />
+        <div className="main">
+          <div className="image-container image-container_home">
+            <div className="image-cover image-cover_home"
+              onTouchStart={e => onTouchStart(e)}
+              onTouchMove={e => onTouchMove(e)}
+              onTouchEnd={onTouchEnd}
+              >
+              <div className="home-heading_wrapper">
+                <h2 className="home-heading style-font" id="home-heading_1">Nature,</h2>
+                <h2 className="home-heading style-font" id="home-heading_2">Science,</h2>
+                <h2 className="home-heading style-font" id="home-heading_3">Future</h2>
+              </div>
+            </div>
+            <div className="image-slider-container">
+              <div
+                className={`image-box image-box_home ${imageDisp === 1 ? 'image_show':''}`}
+                id="image_1">
+              </div>
+              <div
+                className={`image-box image-box_home ${imageDisp === 2 ? 'image_show':''}`}
+                id="image_2"
+                >
+              </div>
+              <div
+                className={`image-box image-box_home ${imageDisp === 3 ? 'image_show':''}`}
+                id="image_3"
+                >
+              </div>
             </div>
           </div>
-          <div className="image-slider-container">
-            <div
-              className={`image-box image-box_home ${imageDisp === 1 ? 'image_show':''}`}
-              id="image_1">
-            </div>
-            <div
-              className={`image-box image-box_home ${imageDisp === 2 ? 'image_show':''}`}
-              id="image_2"
-              >
-            </div>
-            <div
-              className={`image-box image-box_home ${imageDisp === 3 ? 'image_show':''}`}
-              id="image_3"
-              >
-            </div>
+          <div className="image_navi_container">
+            <div className={`image_navi image_navi_1 ${imageDisp === 1 ? 'select_image':''}`} onClick={()=>onPhotoNaviClick(1)}></div>
+            <div className={`image_navi image_navi_2 ${imageDisp === 2 ? 'select_image':''}`} onClick={()=>onPhotoNaviClick(2)}></div>
+            <div className={`image_navi image_navi_3 ${imageDisp === 3 ? 'select_image':''}`} onClick={()=>onPhotoNaviClick(3)}></div>
           </div>
         </div>
-        <div className="image_navi_container">
-          <div className={`image_navi image_navi_1 ${imageDisp === 1 ? 'select_image':''}`} onClick={()=>onPhotoNaviClick(1)}></div>
-          <div className={`image_navi image_navi_2 ${imageDisp === 2 ? 'select_image':''}`} onClick={()=>onPhotoNaviClick(2)}></div>
-          <div className={`image_navi image_navi_3 ${imageDisp === 3 ? 'select_image':''}`} onClick={()=>onPhotoNaviClick(3)}></div>
-        </div>
-      </main>
-      <Footer />
+        <Footer />
+      </div>
     </>
   )
 }
