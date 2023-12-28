@@ -92,8 +92,8 @@ function Home() {
               onTouchEnd={onTouchEnd}
               >
               <div className="home-heading_wrapper">
-                <h2 className="home-heading style-font" id="home-heading_1">Nature,</h2>
-                <h2 className="home-heading style-font" id="home-heading_2">Science,</h2>
+                <h2 className="home-heading style-font" id="home-heading_1">Nature</h2>
+                <h2 className="home-heading style-font" id="home-heading_2">Science</h2>
                 <h2 className="home-heading style-font" id="home-heading_3">Future</h2>
               </div>
             </div>

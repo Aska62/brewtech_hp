@@ -1,39 +1,39 @@
 .image-container_home {
   height: calc(100% - 3.4rem);
 }
-
 .image-cover_home {
-  font-size: 3.2rem;
-  text-align: center;
+  background: radial-gradient( rgba(30, 30, 30, 0), rgba(30, 30, 30, 1));
+
 }
 
 /* Heading */
 .home-heading_wrapper {
-  width: 100%;
-  max-width: 550px;
-  height: fit-content;
-  margin: 14% auto 0 auto;
+  width: 10rem;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
 }
 .home-heading {
+  width: 5rem;
+  line-height: 2rem;
+  text-align: center;
+  position: absolute;
+  right: calc(50% - 2.5rem);
   margin: 0;
-  padding: 0;
-  display: block;
-  width: fit-content;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 #home-heading_1 {
-  margin: 0 0 0 1rem;
-  padding-right: 10rem;
-  animation: fadeInAnimation ease 6s;
+  top:  calc(50% - 3rem);
+  animation: slideInFromTop ease 1s;
 }
 #home-heading_2 {
-  margin: 0 auto;
-  animation: fadeInAnimation2 ease 5s;
+  top: calc(50% - 1rem);
+  animation: fadeInAnimation2 ease 4s
 }
 #home-heading_3 {
-  margin: 0 1rem 0 auto;
-  animation: fadeInAnimation3 ease 4s;
+  top:  calc(50% + 1rem);
+  animation: slideInFromBottom ease 1.7s;
 }
 
 /* IMAGE SLIDER */
@@ -91,10 +91,70 @@
 
 /* Mobile */
 @media only screen and (max-width:620px) {
+  .image-container_home {
+    height: calc(100% - 2rem);
+  }
   .image_navi_container {
     height: 2rem;
   }
   .image_navi {
     margin-bottom: 0rem;
+  }
+  .image-cover_home {
+    font-size: 1rem;
+    line-height: 1;
+  }
+}
+
+/* ANIMATION */
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+@keyframes fadeInAnimation2 {
+  0% {
+      opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+@keyframes fadeInAnimation3 {
+  0% {
+      opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  100% {
+    top: calc(50% - 3rem);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromBottom {
+  0% {
+    top: 100vh;
+    opacity: 0;
+  }
+  100% {
+    top:  calc(50% + 1rem);
+    opacity: 1;
   }
 }

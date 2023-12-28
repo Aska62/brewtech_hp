@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import LangBar from "../components/LangBar";
@@ -7,77 +7,119 @@ import LanguageContext from "../context/LanguageContext";
 function Products() {
   const { language } = useContext(LanguageContext);
 
+  const [tableOpen, setTableOpen] = useState([
+    false,
+    false,
+    false
+  ]);
+
+  const onTitleClick = (id) => {
+    let newTableOpen = [...tableOpen];
+    newTableOpen[id] = !tableOpen[id];
+    setTableOpen(newTableOpen);
+  }
+
   switch (language) {
     case 'en':
       return (
         <>
           <Navbar currentPage={'products'} logoType={'logo_bt'} />
-          <div className="main-container main-container_products">
+          <div className="main-container">
             <LangBar />
             <main className="main main_products">
               <div className="image-container image-container_products">
                 <div className="image-cover image-cover_products">
-                  <div className="copy-container">
-                    <p className="products-copy style-font" id="products-copy_1"><span>Malting Garage </span><br />- Ibaraki, Japan</p>
-                    <p className="products-copy style-font" id="products-copy_2">Lots of great things<br />starts from a garage.</p>
+                  <div className="copy-container copy-container_products">
+                    <h2 className="products-copy style-font" id="products-copy_1">Malting Garage &minus; Ibaraki, Japan</h2>
+                    <p className="products-copy style-font" id="products-copy_2">Lots of great things starts from a garage.</p>
+                  </div>
+                  <div className="product-detail-cotainer">
+                    <div className="product-detail-box">
+                      <div className="product-category_box" onClick={()=>onTitleClick(0)}>
+                        <h3 className="product-category style-font">Whisky Material</h3>
+                        <div className={`table-control-container ${tableOpen[0] ? "table-control-container_open":""}`}>
+                          <div className={`table-controle-line table-controle-line_left ${tableOpen[0] ? "table-controle-line_left_open":""}`}></div>
+                          <div className={`table-controle-line table-controle-line_right ${tableOpen[0] ? "table-controle-line_right_open":""}`}></div>
+                        </div>
+                      </div>
+                      <div className={`product-type-wrapper ${tableOpen[0] ? "product-type-wrapper_open":""}`}>
+                        <div className={`product-type-box ${tableOpen[0] ? "product-type-box_open":""}`}>
+                          <div className="product-title-contaienr">
+                            <h4 className="product-title">Distilling Malt&nbsp;&minus;&nbsp;0000JPY</h4>
+                          </div>
+                          <div className="product-table">
+                              <p className="product-table-element">Moisture:&nbsp;5.0% max</p>
+                              <p className="product-table-element">EBC:&nbsp;3-5</p>
+                              <p className="product-table-element">Phenols:&nbsp;XXXX ppm</p>
+                          </div>
+                        </div>
+                        <div className={`product-type-box ${tableOpen[0] ? "product-type-box_open":""}`}>
+                          <div className="product-title-contaienr">
+                            <h4 className="product-title">Lightly Peated Malt&nbsp;&minus;&nbsp;0000JPY</h4>
+                          </div>
+                          <div className="product-table">
+                            <p className="product-table-element">Moisture:&nbsp;5.0% max</p>
+                            <p className="product-table-element">EBC:&nbsp;3-5</p>
+                            <p className="product-table-element">Phenols:&nbsp;5-15 ppm</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="product-detail-box">
+                      <div className="product-category_box" onClick={()=>onTitleClick(1)}>
+                        <h3 className="product-category style-font">Beer Material</h3>
+                        <div className={`table-control-container ${tableOpen[1] ? "table-control-container_open":""}`}>
+                          <div className={`table-controle-line table-controle-line_left ${tableOpen[1] ? "table-controle-line_left_open":""}`}></div>
+                          <div className={`table-controle-line table-controle-line_right ${tableOpen[1] ? "table-controle-line_right_open":""}`}></div>
+                        </div>
+                      </div>
+                      <div className={`product-type-wrapper ${tableOpen[1] ? "product-type-wrapper_open":""}`}>
+                        <div className={`product-type-box ${tableOpen[1] ? "product-type-box_open":""}`}>
+                          <div className="product-title-contaienr">
+                            <h4 className="product-title">Pilsner Malt&nbsp;&minus;&nbsp;0000JPY</h4>
+                          </div>
+                          <div className="product-table">
+                            <p className="product-table-element">Moisture:&nbsp;5.0% max</p>
+                            <p className="product-table-element">EBC:&nbsp;3-5</p>
+                            <p className="product-table-element">Phenols::&nbsp;ppm</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="product-detail-box">
+                      <div className="product-category_box" onClick={()=>onTitleClick(2)}>
+                        <h3 className="product-category style-font">OEM</h3>
+                        <div className={`table-control-container ${tableOpen[2] ? "table-control-container_open":""}`}>
+                          <div className={`table-controle-line table-controle-line_left ${tableOpen[2] ? "table-controle-line_left_open":""}`}></div>
+                          <div className={`table-controle-line table-controle-line_right ${tableOpen[2] ? "table-controle-line_right_open":""}`}></div>
+                        </div>
+                      </div>
+                      <div className={`product-type-wrapper ${tableOpen[2] ? "product-type-wrapper_open":""}`}>
+                        <div className={`product-type-box ${tableOpen[2] ? "product-type-box_open":""}`}>
+                          <div className="product-title-contaienr">
+                            <h4 className="product-title">Customization-Base Malt&nbsp;&minus;&nbsp;0000JPY</h4>
+                          </div>
+                            <div className="product-table">
+                              <p className="product-table-element">Moisture:&nbsp;5.0% max</p>
+                              <p className="product-table-element">EBC:&nbsp;3-10</p>
+                              <p className="product-table-element">Phenols:&nbsp;XXXX ppm</p>
+                            </div>
+                          </div>
+                        <div className={`product-type-box ${tableOpen[2] ? "product-type-box_open":""}`}>
+                          <div className="product-title-contaienr">
+                            <h4 className="product-title">Customization-Smoked Malt&nbsp;&minus;&nbsp;0000JPY</h4>
+                          </div>
+                          <div className="product-table">
+                            <p className="product-table-element">Moisture:&nbsp;5.0% max</p>
+                            <p className="product-table-element">EBC:&nbsp;3-5</p>
+                            <p className="product-table-element">Phenols:&nbsp;5-15 ppm</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="image-box image-container_garage"></div>
-                <div className="table-container">
-                  <table className="table_products product-table_en">
-                  <thead>
-                      <tr>
-                        <th></th>
-                        <th>Malt</th>
-                        <th>Moisture</th>
-                        <th>EBC</th>
-                        <th>Phenols(ppm)</th>
-                        <th>Price/kg(JPY)</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td rowSpan="2">Whisky Material</td>
-                        <td>Distilling Malt</td>
-                        <td>5.0% max</td>
-                        <td>3-5</td>
-                        <td></td>
-                        <td></td>
-
-                      </tr>
-                      <tr>
-                        <td>Lightly Peated Malt</td>
-                        <td>5.0% max</td>
-                        <td>3-5</td>
-                        <td>5-15</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>Beer Material</td>
-                        <td>Pilsner Malt</td>
-                        <td>5.0% max</td>
-                        <td>3-5</td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td rowSpan="2">OEM</td>
-                        <td>Customization-Base Malt</td>
-                        <td>5.0% max</td>
-                        <td>3-10</td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>Customization-Smoked Malt</td>
-                        <td>5.0% max</td>
-                        <td>3-10</td>
-                        <td>5-15</td>
-                        <td></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
               </div>
             </main>
             <Footer/>
@@ -94,66 +136,97 @@ function Products() {
             <main className="main main_products">
               <div className="image-container image-container_products">
                 <div className="image-cover image-cover_products">
-                  <div className="copy-container">
-                    <p className="products-copy style-font" id="products-copy_1"><span>Malting Garage </span><br />- Ibaraki, Japan</p>
-                    <p className="products-copy style-font" id="products-copy_2">Lots of great things<br />starts from a garage.</p>
+                  <div className="copy-container copy-container_products">
+                    <h2 className="products-copy style-font" id="products-copy_1">Malting Garage &minus; Ibaraki, Japan</h2>
+                    <p className="products-copy style-font" id="products-copy_2">Lots of great things starts from a garage.</p>
+                  </div>
+                  <div className="product-detail-cotainer">
+                    <div className="product-detail-box">
+                      <div className="product-category_box" onClick={()=>onTitleClick(0)}>
+                        <h3 className="product-category style-font_cn">威士忌用</h3>
+                        <div className={`table-control-container ${tableOpen[0] ? "table-control-container_open":""}`}>
+                          <div className={`table-controle-line table-controle-line_left ${tableOpen[0] ? "table-controle-line_left_open":""}`}></div>
+                          <div className={`table-controle-line table-controle-line_right ${tableOpen[0] ? "table-controle-line_right_open":""}`}></div>
+                        </div>
+                      </div>
+                      <div className={`product-type-wrapper ${tableOpen[0] ? "product-type-wrapper_open":""}`}>
+                        <div className={`product-type-box ${tableOpen[0] ? "product-type-box_open":""}`}>
+                          <div className="product-title-contaienr">
+                            <h4 className="product-title">蒸馏麦芽&nbsp;&minus;&nbsp;0000JPY</h4>
+                          </div>
+                          <div className="product-table">
+                              <p className="product-table-element">含水量:&nbsp;5.0% max</p>
+                              <p className="product-table-element">EBC:&nbsp;3-5</p>
+                              <p className="product-table-element">酚类:&nbsp;XXXX ppm</p>
+                          </div>
+                        </div>
+                        <div className={`product-type-box ${tableOpen[0] ? "product-type-box_open":""}`}>
+                          <div className="product-title-contaienr">
+                            <h4 className="product-title">轻度泥煤麦芽&nbsp;&minus;&nbsp;0000JPY</h4>
+                          </div>
+                          <div className="product-table">
+                            <p className="product-table-element">含水量:&nbsp;5.0% max</p>
+                            <p className="product-table-element">EBC:&nbsp;3-5</p>
+                            <p className="product-table-element">酚类:&nbsp;5-15 ppm</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="product-detail-box">
+                      <div className="product-category_box" onClick={()=>onTitleClick(1)}>
+                        <h3 className="product-category style-font_cn">啤酒用</h3>
+                        <div className={`table-control-container ${tableOpen[1] ? "table-control-container_open":""}`}>
+                          <div className={`table-controle-line table-controle-line_left ${tableOpen[1] ? "table-controle-line_left_open":""}`}></div>
+                          <div className={`table-controle-line table-controle-line_right ${tableOpen[1] ? "table-controle-line_right_open":""}`}></div>
+                        </div>
+                      </div>
+                      <div className={`product-type-wrapper ${tableOpen[1] ? "product-type-wrapper_open":""}`}>
+                        <div className={`product-type-box ${tableOpen[1] ? "product-type-box_open":""}`}>
+                          <div className="product-title-contaienr">
+                            <h4 className="product-title">皮尔森麦芽&nbsp;&minus;&nbsp;0000JPY</h4>
+                          </div>
+                          <div className="product-table">
+                            <p className="product-table-element">含水量:&nbsp;5.0% max</p>
+                            <p className="product-table-element">EBC:&nbsp;3-5</p>
+                            <p className="product-table-element">酚类:&nbsp;ppm</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="product-detail-box">
+                      <div className="product-category_box" onClick={()=>onTitleClick(2)}>
+                        <h3 className="product-category style-font_cn">OEM</h3>
+                        <div className={`table-control-container ${tableOpen[2] ? "table-control-container_open":""}`}>
+                          <div className={`table-controle-line table-controle-line_left ${tableOpen[2] ? "table-controle-line_left_open":""}`}></div>
+                          <div className={`table-controle-line table-controle-line_right ${tableOpen[2] ? "table-controle-line_right_open":""}`}></div>
+                        </div>
+                      </div>
+                      <div className={`product-type-wrapper ${tableOpen[2] ? "product-type-wrapper_open":""}`}>
+                        <div className={`product-type-box ${tableOpen[2] ? "product-type-box_open":""}`}>
+                          <div className="product-title-contaienr">
+                            <h4 className="product-title">接受定制-基础麦芽t&nbsp;&minus;&nbsp;0000JPY</h4>
+                          </div>
+                          <div className="product-table">
+                            <p className="product-table-element">含水量:&nbsp;5.0% max</p>
+                            <p className="product-table-element">EBC:&nbsp;3-10</p>
+                            <p className="product-table-element">酚类:&nbsp;XXXX ppm</p>
+                          </div>
+                        </div>
+                        <div className={`product-type-box ${tableOpen[2] ? "product-type-box_open":""}`}>
+                          <div className="product-title-contaienr">
+                            <h4 className="product-title">接受定制-烟熏麦芽&nbsp;&minus;&nbsp;0000JPY</h4>
+                          </div>
+                          <div className="product-table">
+                            <p className="product-table-element">含水量:&nbsp;5.0% max</p>
+                            <p className="product-table-element">EBC:&nbsp;3-5</p>
+                            <p className="product-table-element">酚类:&nbsp;5-15 ppm</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="image-box image-container_garage"></div>
-                <div className="table-container">
-                  <table className="table_products product-table_cn">
-                    <thead>
-                      <tr>
-                        <th></th>
-                        <th>麦芽</th>
-                        <th>含水量</th>
-                        <th>EBC</th>
-                        <th>酚类(ppm)</th>
-                        <th>价格/kg(JPY)</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td rowSpan="2">威士忌用</td>
-                        <td>蒸馏麦芽</td>
-                        <td>5.0% max</td>
-                        <td>3-5</td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>轻度泥煤麦芽</td>
-                        <td>5.0% max</td>
-                        <td>3-5</td>
-                        <td>5-15</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>啤酒用</td>
-                        <td>皮尔森麦芽</td>
-                        <td>5.0% max</td>
-                        <td>3-5</td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td rowSpan="2">OEM</td>
-                        <td>接受定制-基础麦芽</td>
-                        <td>5.0% max</td>
-                        <td>3-10</td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>接受定制-烟熏麦芽</td>
-                        <td>5.0% max</td>
-                        <td>3-10</td>
-                        <td>5-15</td>
-                        <td></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
               </div>
             </main>
             <Footer/>
@@ -170,71 +243,102 @@ function Products() {
         <main className="main main_products">
           <div className="image-container image-container_products">
             <div className="image-cover image-cover_products">
-              <div className="copy-container">
-                <p className="products-copy style-font" id="products-copy_1"><span>Malting Garage </span><br />- Ibaraki, Japan</p>
-                <p className="products-copy style-font" id="products-copy_2">Lots of great things<br />starts from a garage.</p>
+              <div className="copy-container copy-container_products">
+                <h2 className="products-copy style-font" id="products-copy_1">Malting Garage &minus; Ibaraki, Japan</h2>
+                <p className="products-copy style-font" id="products-copy_2">Lots of great things starts from a garage.</p>
+              </div>
+              <div className="product-detail-cotainer">
+                <div className="product-detail-box">
+                  <div className="product-category_box" onClick={()=>onTitleClick(0)}>
+                    <h3 className="product-category style-font_jp">ウイスキー用</h3>
+                    <div className={`table-control-container ${tableOpen[0] ? "table-control-container_open":""}`}>
+                      <div className={`table-controle-line table-controle-line_left ${tableOpen[0] ? "table-controle-line_left_open":""}`}></div>
+                      <div className={`table-controle-line table-controle-line_right ${tableOpen[0] ? "table-controle-line_right_open":""}`}></div>
+                    </div>
+                  </div>
+                  <div className={`product-type-wrapper ${tableOpen[0] ? "product-type-wrapper_open":""}`}>
+                    <div className={`product-type-box ${tableOpen[0] ? "product-type-box_open":""}`}>
+                      <div className="product-title-contaienr">
+                        <h4 className="product-title">ディスティリング・モルト&nbsp;&minus;&nbsp;0000JPY</h4>
+                      </div>
+                      <div className="product-table">
+                          <p className="product-table-element">含水率:&nbsp;5.0% max</p>
+                          <p className="product-table-element">EBC:&nbsp;3-5</p>
+                          <p className="product-table-element">フェノール:&nbsp;XXXX ppm</p>
+                      </div>
+                    </div>
+                    <div className={`product-type-box ${tableOpen[0] ? "product-type-box_open":""}`}>
+                      <div className="product-title-contaienr">
+                        <h4 className="product-title">ライト・ピーテッド・モルト&nbsp;&minus;&nbsp;0000JPY</h4>
+                      </div>
+                      <div className="product-table">
+                        <p className="product-table-element">含水率:&nbsp;5.0% max</p>
+                        <p className="product-table-element">EBC:&nbsp;3-5</p>
+                        <p className="product-table-element">フェノール:&nbsp;5-15 ppm</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="product-detail-box">
+                  <div className="product-category_box" onClick={()=>onTitleClick(1)}>
+                    <h3 className="product-category style-font_jp">ビール用</h3>
+                    <div className={`table-control-container ${tableOpen[1] ? "table-control-container_open":""}`}>
+                      <div className={`table-controle-line table-controle-line_left ${tableOpen[1] ? "table-controle-line_left_open":""}`}></div>
+                      <div className={`table-controle-line table-controle-line_right ${tableOpen[1] ? "table-controle-line_right_open":""}`}></div>
+                    </div>
+                  </div>
+                  <div className={`product-type-wrapper ${tableOpen[1] ? "product-type-wrapper_open":""}`}>
+                    <div className={`product-type-box ${tableOpen[1] ? "product-type-box_open":""}`}>
+                      <div className="product-title-contaienr">
+                        <h4 className="product-title">ピルスナー・モルト&nbsp;&minus;&nbsp;0000JPY</h4>
+                      </div>
+                      <div className="product-table">
+                        <p className="product-table-element">含水率:&nbsp;5.0% max</p>
+                        <p className="product-table-element">EBC:&nbsp;3-5</p>
+                        <p className="product-table-element">フェノール:&nbsp;ppm</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="product-detail-box">
+                  <div className="product-category_box" onClick={()=>onTitleClick(2)}>
+                    <h3 className="product-category style-font_jp">OEM</h3>
+                    <div className={`table-control-container ${tableOpen[2] ? "table-control-container_open":""}`}>
+                      <div className={`table-controle-line table-controle-line_left ${tableOpen[2] ? "table-controle-line_left_open":""}`}></div>
+                      <div className={`table-controle-line table-controle-line_right ${tableOpen[2] ? "table-controle-line_right_open":""}`}></div>
+                    </div>
+                  </div>
+                  <div className={`product-type-wrapper ${tableOpen[2] ? "product-type-wrapper_open":""}`}>
+                    <div className={`product-type-box ${tableOpen[2] ? "product-type-box_open":""}`}>
+                      <div className="product-title-contaienr">
+                        <h4 className="product-title">オーダーメイド・ベース・モルト&nbsp;&minus;&nbsp;0000JPY</h4>
+                      </div>
+                        <div className="product-table">
+                          <p className="product-table-element">含水率:&nbsp;5.0% max</p>
+                          <p className="product-table-element">EBC:&nbsp;3-10</p>
+                          <p className="product-table-element">フェノール:&nbsp;XXXX ppm</p>
+                        </div>
+                      </div>
+                    <div className={`product-type-box ${tableOpen[2] ? "product-type-box_open":""}`}>
+                      <div className="product-title-contaienr">
+                        <h4 className="product-title">オーダーメイド・スモーク・モルト&nbsp;&minus;&nbsp;0000JPY</h4>
+                      </div>
+                      <div className="product-table">
+                        <p className="product-table-element">含水率:&nbsp;5.0% max</p>
+                        <p className="product-table-element">EBC:&nbsp;3-5</p>
+                        <p className="product-table-element">フェノール:&nbsp;5-15 ppm</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="image-box image-container_garage"></div>
-              <div className="table-container">
-                <table className="table_products product-table_jp">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th>モルト</th>
-                      <th>含有率</th>
-                      <th>EBC</th>
-                      <th className="product-table-th_ppm_jp">フェノール(ppm)</th>
-                      <th>価格/kg(円)</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td rowSpan="2" className="product-table_td_jp">ウイスキー用</td>
-                      <td className="product-table_td_jp">ディスティリング・モルト</td>
-                      <td>5.0% max</td>
-                      <td>3-5</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td className="product-table_td_jp">ライト・ピーテッド・モルト</td>
-                      <td>5.0% max</td>
-                      <td>3-5</td>
-                      <td>5-15</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td className="product-table_td_jp">ビール用</td>
-                      <td className="product-table_td_jp">ピルスナー・モルト</td>
-                      <td>5.0% max</td>
-                      <td>3-5</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td rowSpan="2">OEM</td>
-                      <td className="product-table_td_jp">オーダーメイド・ベース・モルト</td>
-                      <td>5.0% max</td>
-                      <td>3-10</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td className="product-table_td_jp">オーダーメイド・スモーク・モルト</td>
-                      <td>5.0% max</td>
-                      <td>3-10</td>
-                      <td>5-15</td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </main>
-          <Footer/>
-        </div>
-      </>
+          </div>
+        </main>
+        <Footer/>
+      </div>
+    </>
     )
   }
 }

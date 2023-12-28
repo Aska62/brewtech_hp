@@ -2,105 +2,112 @@
   background-image: url("../../assets/images/image_1.png");
 }
 .main-container_supports {
-  width: 80%;
+  width: 100%;
   max-width: 800px;
   height: 100%;
-  text-align: left;
   margin: 0 auto;
 }
+
+.support-lead-box {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.supports-copy {
+  width: fit-content;
+  display: block;
+  margin: 2rem auto 1rem auto;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 1);
+}
 .note_supports {
-  font-style: normal;
-  line-height: 1.3rem;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  margin-top: 2rem;
+  font-style: italic;
+  font-size: .8rem;
+  line-height: 1rem;
+  color: rgba(255, 255, 255, 1);
+  margin-top: .8rem;
   margin-bottom: 3rem;
 }
-.main-container_supports ul {
-  padding: 0;
-  font-style: normal;
+
+.support-content-container {
+  width: 100%;
+  max-width: 500px;
+  min-width: 270px;
+  margin: 0 auto;
+  text-align: center;
 }
-.copy-container_supports .li_bullet {
-  margin-left: 3rem;
+.support-content-container:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, .8);
+}
+.support-content-box {
+  margin-bottom: 1.8rem;
+}
+.supports-h3 {
+  font-size: 1.8rem;
+  margin: 0;
 }
 
-.supports-h2_jp {
-  font-size: 2rem;
-  font-weight: normal;
-  margin-bottom: 0.5rem;
+.detail-control-container {
+  width: 28px;
+  height: 28px;
+  margin: 0 auto;
+  position: relative;
+  transition-duration: .3s;
 }
-.note_supports_jp {
-  font-size: 0.8rem;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  margin-top: 1rem;
+.detail-control-container_open {
+  width: 90%;
 }
-.supports-h3_jp {
-  font-size: 1.3rem;
-  line-height: 1;
-  font-style: normal;
-  margin-top: 2.5rem;
-  margin-bottom: 0.5rem;
+.detail-controle-line {
+  width: 50%;
+  height: 1.6px;
+  background-color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 50%;
+  margin: 0;
+  transition-duration: .3s;
 }
-.supports-li_jp {
-  font-size: 1rem;
-  font-weight: 360;
-  line-height: 1.6rem;
-  margin-left: 1rem;
+.detail-controle-line_left {
+  right: calc(50% - 2.2px);
+  transform:rotate(45deg);
 }
-.supports_ul_p_jp {
-  font-size: 1rem;
-  font-weight: 360;
-  line-height: 1.5rem;
-  margin: 0.5rem 0 0.2rem 1rem;
+.detail-controle-line_right {
+  left: calc(50% - 2.2px);
+  transform:rotate(-45deg);
+}
+.detail-controle-line_left_open {
+  transform:unset;
+  width: 50%;
+}
+.detail-controle-line_right_open {
+  transform:unset;
+  width: 50%;
 }
 
-.supports-h2_en {
-  font-size: 3rem;
-  font-weight: normal;
-  margin-bottom: 0.5rem;
+.supports-detail-container {
+  transition-duration: .3s;
+  display: none;
+  color: rgba(255, 255, 255, 1);
 }
-.supports-h3_en {
-  font-size: 1.6rem;
-  line-height: 1;
-  font-style: normal;
-  margin-bottom: 0.5rem;
+.supports-detail-container_open {
+  display: unset;
 }
-.supports-li_en {
-  font-size: 1.2rem;
-  font-weight: 360;
+.supports-detail-text {
+  font-size: .9rem;
+  line-height: 1.3;
+  margin: .3rem auto;
+}
+.supports-detail-ul {
+  margin: .8rem auto 2rem auto;
+  text-align: left;
+  width: max-content;
+}
+.supports-detail-li {
+  font-size: .9rem;
   line-height: 1.5;
-  margin-left: 1rem;
-}
-.supports_ul_p_en {
-  font-size: 1.2rem;
-  font-weight: 360;
-  line-height: 1.5rem;
-  margin: 0.5rem 0 0.5rem 1rem;
-}
-
-.note_supports_cn {
-  font-size: 0.8rem;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  margin-top: 1rem;
-}
-.supports-h3_cn {
-  font-size: 1.3rem;
-  line-height: 1;
-  font-style: normal;
-  margin-top: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-.supports-li_cn {
-  font-size: 1rem;
-  line-height: 1.6rem;
-  margin-left: 1rem;
-}
-.supports_ul_p_cn {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin: 0.5rem 0 0.2rem 1rem;
+  list-style-type: "- ";
+  width: 100%;
+  min-width: 89px;
 }
 
 /* Tablet*/
@@ -112,14 +119,17 @@
 
 /* Mobile */
 @media only screen and (max-width:576px) {
-  .copy-container_supports {
-    bottom: 9rem;
+  .note_supports {
+    font-size: .7rem;
   }
-  .copy-container_supports h2 {
-    font-size: 1.1rem;
+  .supports-h3 {
+    font-size: 1.2rem;
   }
-  .copy-container_supports li {
-    font-size: 1rem;
-    margin-left: 1rem;
+  .supports-detail-text {
+    font-size: .7rem;
+    width: 95%;
+  }
+  .supports-detail-li {
+    font-size: .7rem;
   }
 }

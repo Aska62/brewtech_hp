@@ -17,8 +17,8 @@ function Info() {
             <main className="main">
               <div className="image-container">
                 <div className="image-cover image-cover_info">
-                  <h2 className="info_h2 style-font">Info</h2>
-                  <div className="info-wrapper">
+                  <h2 className="info_h2">Info</h2>
+                  <div className="info-wrapper style-font">
                     <p>Ibaraki - Japan</p>
                     <p>Email : info@brewtech-supports.com</p>
                   </div>
@@ -41,7 +41,7 @@ function Info() {
               <div className="image-container">
                 <div className="image-cover image-cover_info">
                   <h2 className="info_h2 style-font">Info</h2>
-                  <div className="info-wrapper">
+                  <div className="info-wrapper style-font">
                     <p>日本 - 茨城</p>
                     <p>Email : info@brewtech-supports.com</p>
                   </div>
@@ -64,7 +64,7 @@ function Info() {
               <div className="image-container">
                 <div className="image-cover image-cover_info">
                   <h2 className="info_h2 style-font">Info</h2>
-                  <div className="info-wrapper">
+                  <div className="info-wrapper style-font">
                     <p>茨城</p>
                     <p>Email : info@brewtech-supports.com</p>
                   </div>
