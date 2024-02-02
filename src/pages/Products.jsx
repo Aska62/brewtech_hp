@@ -45,7 +45,7 @@ function Products() {
                       <div className={`product-type-wrapper ${tableOpen[0] ? "product-type-wrapper_open":""}`}>
                         <div className={`product-type-box ${tableOpen[0] ? "product-type-box_open":""}`}>
                           <div className="product-title-contaienr">
-                            <h4 className="product-title">Distilling Malt&nbsp;&minus;&nbsp;0000JPY</h4>
+                            <h4 className="product-title">Distilling Malt&nbsp;&minus;&nbsp;650JPY/kg</h4>
                           </div>
                           <div className="product-table">
                               <p className="product-table-element">Moisture:&nbsp;5.0% max</p>
@@ -55,7 +55,7 @@ function Products() {
                         </div>
                         <div className={`product-type-box ${tableOpen[0] ? "product-type-box_open":""}`}>
                           <div className="product-title-contaienr">
-                            <h4 className="product-title">Lightly Peated Malt&nbsp;&minus;&nbsp;0000JPY</h4>
+                            <h4 className="product-title">Lightly Peated Malt&nbsp;&minus;&nbsp;780JPY/kg</h4>
                           </div>
                           <div className="product-table">
                             <p className="product-table-element">Moisture:&nbsp;5.0% max</p>
@@ -76,7 +76,7 @@ function Products() {
                       <div className={`product-type-wrapper ${tableOpen[1] ? "product-type-wrapper_open":""}`}>
                         <div className={`product-type-box ${tableOpen[1] ? "product-type-box_open":""}`}>
                           <div className="product-title-contaienr">
-                            <h4 className="product-title">Pilsner Malt&nbsp;&minus;&nbsp;0000JPY</h4>
+                            <h4 className="product-title">Pilsner Malt&nbsp;&minus;&nbsp;650JPY/kg</h4>
                           </div>
                           <div className="product-table">
                             <p className="product-table-element">Moisture:&nbsp;5.0% max</p>
@@ -97,7 +97,7 @@ function Products() {
                       <div className={`product-type-wrapper ${tableOpen[2] ? "product-type-wrapper_open":""}`}>
                         <div className={`product-type-box ${tableOpen[2] ? "product-type-box_open":""}`}>
                           <div className="product-title-contaienr">
-                            <h4 className="product-title">Customization-Base Malt&nbsp;&minus;&nbsp;0000JPY</h4>
+                            <h4 className="product-title">Customization-Base Malt&nbsp;&minus;&nbsp;600JPY/kg</h4>
                           </div>
                             <div className="product-table">
                               <p className="product-table-element">Moisture:&nbsp;5.0% max</p>
@@ -107,7 +107,7 @@ function Products() {
                           </div>
                         <div className={`product-type-box ${tableOpen[2] ? "product-type-box_open":""}`}>
                           <div className="product-title-contaienr">
-                            <h4 className="product-title">Customization-Smoked Malt&nbsp;&minus;&nbsp;0000JPY</h4>
+                            <h4 className="product-title">Customization-Smoked Malt&nbsp;&minus;&nbsp;730JPY/kg</h4>
                           </div>
                           <div className="product-table">
                             <p className="product-table-element">Moisture:&nbsp;5.0% max</p>
@@ -152,7 +152,7 @@ function Products() {
                       <div className={`product-type-wrapper ${tableOpen[0] ? "product-type-wrapper_open":""}`}>
                         <div className={`product-type-box ${tableOpen[0] ? "product-type-box_open":""}`}>
                           <div className="product-title-contaienr">
-                            <h4 className="product-title">蒸馏麦芽&nbsp;&minus;&nbsp;0000JPY</h4>
+                            <h4 className="product-title">蒸馏麦芽&nbsp;&minus;&nbsp;650JPY/kg</h4>
                           </div>
                           <div className="product-table">
                               <p className="product-table-element">含水量:&nbsp;5.0% max</p>
@@ -162,7 +162,7 @@ function Products() {
                         </div>
                         <div className={`product-type-box ${tableOpen[0] ? "product-type-box_open":""}`}>
                           <div className="product-title-contaienr">
-                            <h4 className="product-title">轻度泥煤麦芽&nbsp;&minus;&nbsp;0000JPY</h4>
+                            <h4 className="product-title">轻度泥煤麦芽&nbsp;&minus;&nbsp;780JPY/kg</h4>
                           </div>
                           <div className="product-table">
                             <p className="product-table-element">含水量:&nbsp;5.0% max</p>
@@ -183,7 +183,7 @@ function Products() {
                       <div className={`product-type-wrapper ${tableOpen[1] ? "product-type-wrapper_open":""}`}>
                         <div className={`product-type-box ${tableOpen[1] ? "product-type-box_open":""}`}>
                           <div className="product-title-contaienr">
-                            <h4 className="product-title">皮尔森麦芽&nbsp;&minus;&nbsp;0000JPY</h4>
+                            <h4 className="product-title">皮尔森麦芽&nbsp;&minus;&nbsp;650JPY/kg</h4>
                           </div>
                           <div className="product-table">
                             <p className="product-table-element">含水量:&nbsp;5.0% max</p>
@@ -204,7 +204,7 @@ function Products() {
                       <div className={`product-type-wrapper ${tableOpen[2] ? "product-type-wrapper_open":""}`}>
                         <div className={`product-type-box ${tableOpen[2] ? "product-type-box_open":""}`}>
                           <div className="product-title-contaienr">
-                            <h4 className="product-title">接受定制-基础麦芽t&nbsp;&minus;&nbsp;0000JPY</h4>
+                            <h4 className="product-title">接受定制-基础麦芽&nbsp;&minus;&nbsp;600JPY/kg</h4>
                           </div>
                           <div className="product-table">
                             <p className="product-table-element">含水量:&nbsp;5.0% max</p>
@@ -214,7 +214,7 @@ function Products() {
                         </div>
                         <div className={`product-type-box ${tableOpen[2] ? "product-type-box_open":""}`}>
                           <div className="product-title-contaienr">
-                            <h4 className="product-title">接受定制-烟熏麦芽&nbsp;&minus;&nbsp;0000JPY</h4>
+                            <h4 className="product-title">接受定制-烟熏麦芽&nbsp;&minus;&nbsp;730JPY/kg</h4>
                           </div>
                           <div className="product-table">
                             <p className="product-table-element">含水量:&nbsp;5.0% max</p>
@@ -259,7 +259,7 @@ function Products() {
                   <div className={`product-type-wrapper ${tableOpen[0] ? "product-type-wrapper_open":""}`}>
                     <div className={`product-type-box ${tableOpen[0] ? "product-type-box_open":""}`}>
                       <div className="product-title-contaienr">
-                        <h4 className="product-title">ディスティリング・モルト&nbsp;&minus;&nbsp;0000JPY</h4>
+                        <h4 className="product-title">ディスティリング・モルト&nbsp;&minus;&nbsp;650JPY/kg</h4>
                       </div>
                       <div className="product-table">
                           <p className="product-table-element">含水率:&nbsp;5.0% max</p>
@@ -269,7 +269,7 @@ function Products() {
                     </div>
                     <div className={`product-type-box ${tableOpen[0] ? "product-type-box_open":""}`}>
                       <div className="product-title-contaienr">
-                        <h4 className="product-title">ライト・ピーテッド・モルト&nbsp;&minus;&nbsp;0000JPY</h4>
+                        <h4 className="product-title">ライト・ピーテッド・モルト&nbsp;&minus;&nbsp;780JPY/kg</h4>
                       </div>
                       <div className="product-table">
                         <p className="product-table-element">含水率:&nbsp;5.0% max</p>
@@ -290,7 +290,7 @@ function Products() {
                   <div className={`product-type-wrapper ${tableOpen[1] ? "product-type-wrapper_open":""}`}>
                     <div className={`product-type-box ${tableOpen[1] ? "product-type-box_open":""}`}>
                       <div className="product-title-contaienr">
-                        <h4 className="product-title">ピルスナー・モルト&nbsp;&minus;&nbsp;0000JPY</h4>
+                        <h4 className="product-title">ピルスナー・モルト&nbsp;&minus;&nbsp;650JPY/kg</h4>
                       </div>
                       <div className="product-table">
                         <p className="product-table-element">含水率:&nbsp;5.0% max</p>
@@ -311,7 +311,7 @@ function Products() {
                   <div className={`product-type-wrapper ${tableOpen[2] ? "product-type-wrapper_open":""}`}>
                     <div className={`product-type-box ${tableOpen[2] ? "product-type-box_open":""}`}>
                       <div className="product-title-contaienr">
-                        <h4 className="product-title">オーダーメイド・ベース・モルト&nbsp;&minus;&nbsp;0000JPY</h4>
+                        <h4 className="product-title">オーダーメイド・ベース・モルト&nbsp;&minus;&nbsp;600JPY/kg</h4>
                       </div>
                         <div className="product-table">
                           <p className="product-table-element">含水率:&nbsp;5.0% max</p>
@@ -321,7 +321,7 @@ function Products() {
                       </div>
                     <div className={`product-type-box ${tableOpen[2] ? "product-type-box_open":""}`}>
                       <div className="product-title-contaienr">
-                        <h4 className="product-title">オーダーメイド・スモーク・モルト&nbsp;&minus;&nbsp;0000JPY</h4>
+                        <h4 className="product-title">オーダーメイド・スモーク・モルト&nbsp;&minus;&nbsp;730JPY/kg</h4>
                       </div>
                       <div className="product-table">
                         <p className="product-table-element">含水率:&nbsp;5.0% max</p>
