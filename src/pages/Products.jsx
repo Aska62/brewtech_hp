@@ -42,28 +42,29 @@ function Products() {
                           <div className={`table-controle-line table-controle-line_right ${tableOpen[0] ? "table-controle-line_right_open":""}`}></div>
                         </div>
                       </div>
-                      <div className={`product-type-wrapper ${tableOpen[0] ? "product-type-wrapper_open":""}`}>
-                        <div className={`product-type-box ${tableOpen[0] ? "product-type-box_open":""}`}>
-                          <div className="product-title-contaienr">
-                            <h4 className="product-title">Distilling Malt&nbsp;&minus;&nbsp;650JPY/kg</h4>
-                          </div>
-                          <div className="product-table">
-                              <p className="product-table-element">Moisture:&nbsp;5.0% max</p>
-                              <p className="product-table-element">EBC:&nbsp;3-5</p>
-                              <p className="product-table-element">Phenols:&nbsp;XXXX ppm</p>
-                          </div>
-                        </div>
-                        <div className={`product-type-box ${tableOpen[0] ? "product-type-box_open":""}`}>
-                          <div className="product-title-contaienr">
-                            <h4 className="product-title">Lightly Peated Malt&nbsp;&minus;&nbsp;780JPY/kg</h4>
-                          </div>
-                          <div className="product-table">
-                            <p className="product-table-element">Moisture:&nbsp;5.0% max</p>
-                            <p className="product-table-element">EBC:&nbsp;3-5</p>
-                            <p className="product-table-element">Phenols:&nbsp;5-15 ppm</p>
-                          </div>
-                        </div>
-                      </div>
+                      <table className={`product-type-wrapper ${tableOpen[0] ? "product-type-wrapper_open":""}`}>
+                        <tr className="product-table_tr">
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type"></th>
+                          <th className="product-table_cell product-table_cell_header"><p>Moisture</p><span className="product-table_span">(% max)</span></th>
+                          <th className="product-table_cell product-table_cell_header"><p>EBC</p></th>
+                          <th className="product-table_cell product-table_cell_header"><p>Phenoles</p><span className="product-table_span">(ppm)</span></th>
+                          <th className="product-table_cell product-table_cell_header"><p>Price</p><span className="product-table_span">(JPY/kg)</span></th>
+                        </tr>
+                        <tr className="product-table_tr">
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_en">Distilling Malt</h4></th>
+                          <td className="product-table_cell">5.0</td>
+                          <td className="product-table_cell">3-5</td>
+                          <td className="product-table_cell">XXXX</td>
+                          <td className="product-table_cell">650</td>
+                        </tr>
+                        <tr className="product-table_tr">
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_en">Lightly Peated Malt</h4></th>
+                          <td className="product-table_cell">5.0</td>
+                          <td className="product-table_cell">3-5</td>
+                          <td className="product-table_cell">5-15</td>
+                          <td className="product-table_cell">780</td>
+                        </tr>
+                      </table>
                     </div>
                     <div className="product-detail-box">
                       <div className="product-category_box" onClick={()=>onTitleClick(1)}>
@@ -73,18 +74,22 @@ function Products() {
                           <div className={`table-controle-line table-controle-line_right ${tableOpen[1] ? "table-controle-line_right_open":""}`}></div>
                         </div>
                       </div>
-                      <div className={`product-type-wrapper ${tableOpen[1] ? "product-type-wrapper_open":""}`}>
-                        <div className={`product-type-box ${tableOpen[1] ? "product-type-box_open":""}`}>
-                          <div className="product-title-contaienr">
-                            <h4 className="product-title">Pilsner Malt&nbsp;&minus;&nbsp;650JPY/kg</h4>
-                          </div>
-                          <div className="product-table">
-                            <p className="product-table-element">Moisture:&nbsp;5.0% max</p>
-                            <p className="product-table-element">EBC:&nbsp;3-5</p>
-                            <p className="product-table-element">Phenols::&nbsp;ppm</p>
-                          </div>
-                        </div>
-                      </div>
+                      <table className={`product-type-wrapper ${tableOpen[1] ? "product-type-wrapper_open":""}`}>
+                        <tr className="product-table_tr">
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type"></th>
+                          <th className="product-table_cell product-table_cell_header"><p>Moisture</p><span className="product-table_span">(% max)</span></th>
+                          <th className="product-table_cell product-table_cell_header"><p>EBC</p></th>
+                          <th className="product-table_cell product-table_cell_header"><p>Phenoles</p><span className="product-table_span">(ppm)</span></th>
+                          <th className="product-table_cell product-table_cell_header"><p>Price</p><span className="product-table_span">(JPY/kg)</span></th>
+                        </tr>
+                        <tr className="product-table_tr">
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_en">Pilsner Malt</h4></th>
+                          <td className="product-table_cell">5.0</td>
+                          <td className="product-table_cell">3-5</td>
+                          <td className="product-table_cell">XXXX</td>
+                          <td className="product-table_cell">650</td>
+                        </tr>
+                      </table>
                     </div>
                     <div className="product-detail-box">
                       <div className="product-category_box" onClick={()=>onTitleClick(2)}>
@@ -94,28 +99,29 @@ function Products() {
                           <div className={`table-controle-line table-controle-line_right ${tableOpen[2] ? "table-controle-line_right_open":""}`}></div>
                         </div>
                       </div>
-                      <div className={`product-type-wrapper ${tableOpen[2] ? "product-type-wrapper_open":""}`}>
-                        <div className={`product-type-box ${tableOpen[2] ? "product-type-box_open":""}`}>
-                          <div className="product-title-contaienr">
-                            <h4 className="product-title">Customization-Base Malt&nbsp;&minus;&nbsp;600JPY/kg</h4>
-                          </div>
-                            <div className="product-table">
-                              <p className="product-table-element">Moisture:&nbsp;5.0% max</p>
-                              <p className="product-table-element">EBC:&nbsp;3-10</p>
-                              <p className="product-table-element">Phenols:&nbsp;XXXX ppm</p>
-                            </div>
-                          </div>
-                        <div className={`product-type-box ${tableOpen[2] ? "product-type-box_open":""}`}>
-                          <div className="product-title-contaienr">
-                            <h4 className="product-title">Customization-Smoked Malt&nbsp;&minus;&nbsp;730JPY/kg</h4>
-                          </div>
-                          <div className="product-table">
-                            <p className="product-table-element">Moisture:&nbsp;5.0% max</p>
-                            <p className="product-table-element">EBC:&nbsp;3-5</p>
-                            <p className="product-table-element">Phenols:&nbsp;5-15 ppm</p>
-                          </div>
-                        </div>
-                      </div>
+                      <table className={`product-type-wrapper ${tableOpen[2] ? "product-type-wrapper_open":""}`}>
+                        <tr className="product-table_tr">
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type"></th>
+                          <th className="product-table_cell product-table_cell_header"><p>Moisture</p><span className="product-table_span">(% max)</span></th>
+                          <th className="product-table_cell product-table_cell_header"><p>EBC</p></th>
+                          <th className="product-table_cell product-table_cell_header"><p>Phenoles</p><span className="product-table_span">(ppm)</span></th>
+                          <th className="product-table_cell product-table_cell_header"><p>Price</p><span className="product-table_span">(JPY/kg)</span></th>
+                        </tr>
+                        <tr className="product-table_tr">
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_en">Customized-Base Malt</h4></th>
+                          <td className="product-table_cell">5.0</td>
+                          <td className="product-table_cell">3-10</td>
+                          <td className="product-table_cell">XXXX</td>
+                          <td className="product-table_cell">600</td>
+                        </tr>
+                        <tr className="product-table_tr">
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_en">Customized-Smoked Malt</h4></th>
+                          <td className="product-table_cell">5.0</td>
+                          <td className="product-table_cell">3-5</td>
+                          <td className="product-table_cell">5-15</td>
+                          <td className="product-table_cell">730</td>
+                        </tr>
+                      </table>
                     </div>
                   </div>
                 </div>
@@ -149,28 +155,29 @@ function Products() {
                           <div className={`table-controle-line table-controle-line_right ${tableOpen[0] ? "table-controle-line_right_open":""}`}></div>
                         </div>
                       </div>
-                      <div className={`product-type-wrapper ${tableOpen[0] ? "product-type-wrapper_open":""}`}>
-                        <div className={`product-type-box ${tableOpen[0] ? "product-type-box_open":""}`}>
-                          <div className="product-title-contaienr">
-                            <h4 className="product-title">蒸馏麦芽&nbsp;&minus;&nbsp;650JPY/kg</h4>
-                          </div>
-                          <div className="product-table">
-                              <p className="product-table-element">含水量:&nbsp;5.0% max</p>
-                              <p className="product-table-element">EBC:&nbsp;3-5</p>
-                              <p className="product-table-element">酚类:&nbsp;XXXX ppm</p>
-                          </div>
-                        </div>
-                        <div className={`product-type-box ${tableOpen[0] ? "product-type-box_open":""}`}>
-                          <div className="product-title-contaienr">
-                            <h4 className="product-title">轻度泥煤麦芽&nbsp;&minus;&nbsp;780JPY/kg</h4>
-                          </div>
-                          <div className="product-table">
-                            <p className="product-table-element">含水量:&nbsp;5.0% max</p>
-                            <p className="product-table-element">EBC:&nbsp;3-5</p>
-                            <p className="product-table-element">酚类:&nbsp;5-15 ppm</p>
-                          </div>
-                        </div>
-                      </div>
+                      <table className={`product-type-wrapper ${tableOpen[0] ? "product-type-wrapper_open":""}`}>
+                        <tr className="product-table_tr">
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type"></th>
+                          <th className="product-table_cell product-table_cell_header"><p>含水量</p><span className="product-table_span">(% max)</span></th>
+                          <th className="product-table_cell product-table_cell_header"><p>EBC</p></th>
+                          <th className="product-table_cell product-table_cell_header"><p>酚类</p><span className="product-table_span">(ppm)</span></th>
+                          <th className="product-table_cell product-table_cell_header"><p>价格</p><span className="product-table_span">(JPY/kg)</span></th>
+                        </tr>
+                        <tr className="product-table_tr">
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_cn">蒸馏麦芽</h4></th>
+                          <td className="product-table_cell">5.0</td>
+                          <td className="product-table_cell">3-5</td>
+                          <td className="product-table_cell">XXXX</td>
+                          <td className="product-table_cell">650</td>
+                        </tr>
+                        <tr className="product-table_tr">
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_cn">轻度泥煤麦芽</h4></th>
+                          <td className="product-table_cell">5.0</td>
+                          <td className="product-table_cell">3-5</td>
+                          <td className="product-table_cell">5-15</td>
+                          <td className="product-table_cell">780</td>
+                        </tr>
+                      </table>
                     </div>
                     <div className="product-detail-box">
                       <div className="product-category_box" onClick={()=>onTitleClick(1)}>
@@ -180,18 +187,22 @@ function Products() {
                           <div className={`table-controle-line table-controle-line_right ${tableOpen[1] ? "table-controle-line_right_open":""}`}></div>
                         </div>
                       </div>
-                      <div className={`product-type-wrapper ${tableOpen[1] ? "product-type-wrapper_open":""}`}>
-                        <div className={`product-type-box ${tableOpen[1] ? "product-type-box_open":""}`}>
-                          <div className="product-title-contaienr">
-                            <h4 className="product-title">皮尔森麦芽&nbsp;&minus;&nbsp;650JPY/kg</h4>
-                          </div>
-                          <div className="product-table">
-                            <p className="product-table-element">含水量:&nbsp;5.0% max</p>
-                            <p className="product-table-element">EBC:&nbsp;3-5</p>
-                            <p className="product-table-element">酚类:&nbsp;ppm</p>
-                          </div>
-                        </div>
-                      </div>
+                      <table className={`product-type-wrapper ${tableOpen[1] ? "product-type-wrapper_open":""}`}>
+                        <tr className="product-table_tr">
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type"></th>
+                          <th className="product-table_cell product-table_cell_header"><p>含水量</p><span className="product-table_span">(% max)</span></th>
+                          <th className="product-table_cell product-table_cell_header"><p>EBC</p></th>
+                          <th className="product-table_cell product-table_cell_header"><p>酚类</p><span className="product-table_span">(ppm)</span></th>
+                          <th className="product-table_cell product-table_cell_header"><p>价格</p><span className="product-table_span">(JPY/kg)</span></th>
+                        </tr>
+                        <tr className="product-table_tr">
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_cn">皮尔森麦芽</h4></th>
+                          <td className="product-table_cell">5.0</td>
+                          <td className="product-table_cell">3-5</td>
+                          <td className="product-table_cell">XXXX</td>
+                          <td className="product-table_cell">650</td>
+                        </tr>
+                      </table>
                     </div>
                     <div className="product-detail-box">
                       <div className="product-category_box" onClick={()=>onTitleClick(2)}>
@@ -201,28 +212,29 @@ function Products() {
                           <div className={`table-controle-line table-controle-line_right ${tableOpen[2] ? "table-controle-line_right_open":""}`}></div>
                         </div>
                       </div>
-                      <div className={`product-type-wrapper ${tableOpen[2] ? "product-type-wrapper_open":""}`}>
-                        <div className={`product-type-box ${tableOpen[2] ? "product-type-box_open":""}`}>
-                          <div className="product-title-contaienr">
-                            <h4 className="product-title">接受定制-基础麦芽&nbsp;&minus;&nbsp;600JPY/kg</h4>
-                          </div>
-                          <div className="product-table">
-                            <p className="product-table-element">含水量:&nbsp;5.0% max</p>
-                            <p className="product-table-element">EBC:&nbsp;3-10</p>
-                            <p className="product-table-element">酚类:&nbsp;XXXX ppm</p>
-                          </div>
-                        </div>
-                        <div className={`product-type-box ${tableOpen[2] ? "product-type-box_open":""}`}>
-                          <div className="product-title-contaienr">
-                            <h4 className="product-title">接受定制-烟熏麦芽&nbsp;&minus;&nbsp;730JPY/kg</h4>
-                          </div>
-                          <div className="product-table">
-                            <p className="product-table-element">含水量:&nbsp;5.0% max</p>
-                            <p className="product-table-element">EBC:&nbsp;3-5</p>
-                            <p className="product-table-element">酚类:&nbsp;5-15 ppm</p>
-                          </div>
-                        </div>
-                      </div>
+                      <table className={`product-type-wrapper ${tableOpen[2] ? "product-type-wrapper_open":""}`}>
+                        <tr className="product-table_tr">
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type"></th>
+                          <th className="product-table_cell product-table_cell_header"><p>含水量</p><span className="product-table_span">(% max)</span></th>
+                          <th className="product-table_cell product-table_cell_header"><p>EBC</p></th>
+                          <th className="product-table_cell product-table_cell_header"><p>酚类</p><span className="product-table_span">(ppm)</span></th>
+                          <th className="product-table_cell product-table_cell_header"><p>价格</p><span className="product-table_span">(JPY/kg)</span></th>
+                        </tr>
+                        <tr className="product-table_tr">
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_cn">接受定制-基础麦芽</h4></th>
+                          <td className="product-table_cell">5.0</td>
+                          <td className="product-table_cell">3-10</td>
+                          <td className="product-table_cell">XXXX</td>
+                          <td className="product-table_cell">600</td>
+                        </tr>
+                        <tr className="product-table_tr">
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_cn">接受定制-烟熏麦芽</h4></th>
+                          <td className="product-table_cell">5.0</td>
+                          <td className="product-table_cell">3-5</td>
+                          <td className="product-table_cell">5-15</td>
+                          <td className="product-table_cell">730</td>
+                        </tr>
+                      </table>
                     </div>
                   </div>
                 </div>
@@ -256,28 +268,29 @@ function Products() {
                       <div className={`table-controle-line table-controle-line_right ${tableOpen[0] ? "table-controle-line_right_open":""}`}></div>
                     </div>
                   </div>
-                  <div className={`product-type-wrapper ${tableOpen[0] ? "product-type-wrapper_open":""}`}>
-                    <div className={`product-type-box ${tableOpen[0] ? "product-type-box_open":""}`}>
-                      <div className="product-title-contaienr">
-                        <h4 className="product-title">ディスティリング・モルト&nbsp;&minus;&nbsp;650JPY/kg</h4>
-                      </div>
-                      <div className="product-table">
-                          <p className="product-table-element">含水率:&nbsp;5.0% max</p>
-                          <p className="product-table-element">EBC:&nbsp;3-5</p>
-                          <p className="product-table-element">フェノール:&nbsp;XXXX ppm</p>
-                      </div>
-                    </div>
-                    <div className={`product-type-box ${tableOpen[0] ? "product-type-box_open":""}`}>
-                      <div className="product-title-contaienr">
-                        <h4 className="product-title">ライト・ピーテッド・モルト&nbsp;&minus;&nbsp;780JPY/kg</h4>
-                      </div>
-                      <div className="product-table">
-                        <p className="product-table-element">含水率:&nbsp;5.0% max</p>
-                        <p className="product-table-element">EBC:&nbsp;3-5</p>
-                        <p className="product-table-element">フェノール:&nbsp;5-15 ppm</p>
-                      </div>
-                    </div>
-                  </div>
+                  <table className={`product-type-wrapper ${tableOpen[0] ? "product-type-wrapper_open":""}`}>
+                    <tr className="product-table_tr">
+                      <th className="product-table_cell product-table_cell_header product-table_cell_type"></th>
+                      <th className="product-table_cell product-table_cell_header"><p>含水率</p><span className="product-table_span">(% max)</span></th>
+                      <th className="product-table_cell product-table_cell_header"><p>EBC</p></th>
+                      <th className="product-table_cell product-table_cell_header"><p>フェノール</p><span className="product-table_span">(ppm)</span></th>
+                      <th className="product-table_cell product-table_cell_header"><p>価格</p><span className="product-table_span">(円/kg)</span></th>
+                    </tr>
+                    <tr className="product-table_tr">
+                      <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_jp">ディスティリング・モルト</h4></th>
+                      <td className="product-table_cell">5.0</td>
+                      <td className="product-table_cell">3-5</td>
+                      <td className="product-table_cell">XXXX</td>
+                      <td className="product-table_cell">650</td>
+                    </tr>
+                    <tr className="product-table_tr">
+                      <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_jp">ライト・ピーテッド・モルト</h4></th>
+                      <td className="product-table_cell">5.0</td>
+                      <td className="product-table_cell">3-5</td>
+                      <td className="product-table_cell">5-15</td>
+                      <td className="product-table_cell">780</td>
+                    </tr>
+                  </table>
                 </div>
                 <div className="product-detail-box">
                   <div className="product-category_box" onClick={()=>onTitleClick(1)}>
@@ -287,18 +300,22 @@ function Products() {
                       <div className={`table-controle-line table-controle-line_right ${tableOpen[1] ? "table-controle-line_right_open":""}`}></div>
                     </div>
                   </div>
-                  <div className={`product-type-wrapper ${tableOpen[1] ? "product-type-wrapper_open":""}`}>
-                    <div className={`product-type-box ${tableOpen[1] ? "product-type-box_open":""}`}>
-                      <div className="product-title-contaienr">
-                        <h4 className="product-title">ピルスナー・モルト&nbsp;&minus;&nbsp;650JPY/kg</h4>
-                      </div>
-                      <div className="product-table">
-                        <p className="product-table-element">含水率:&nbsp;5.0% max</p>
-                        <p className="product-table-element">EBC:&nbsp;3-5</p>
-                        <p className="product-table-element">フェノール:&nbsp;ppm</p>
-                      </div>
-                    </div>
-                  </div>
+                  <table className={`product-type-wrapper ${tableOpen[1] ? "product-type-wrapper_open":""}`}>
+                    <tr className="product-table_tr">
+                      <th className="product-table_cell product-table_cell_header product-table_cell_type"></th>
+                      <th className="product-table_cell product-table_cell_header"><p>含水率</p><span className="product-table_span">(% max)</span></th>
+                      <th className="product-table_cell product-table_cell_header"><p>EBC</p></th>
+                      <th className="product-table_cell product-table_cell_header"><p>フェノール</p><span className="product-table_span">(ppm)</span></th>
+                      <th className="product-table_cell product-table_cell_header"><p>価格</p><span className="product-table_span">(円/kg)</span></th>
+                    </tr>
+                    <tr className="product-table_tr">
+                      <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_jp">ピルスナー・モルト</h4></th>
+                      <td className="product-table_cell">5.0</td>
+                      <td className="product-table_cell">3-5</td>
+                      <td className="product-table_cell">XXXX</td>
+                      <td className="product-table_cell">650</td>
+                    </tr>
+                  </table>
                 </div>
                 <div className="product-detail-box">
                   <div className="product-category_box" onClick={()=>onTitleClick(2)}>
@@ -308,28 +325,29 @@ function Products() {
                       <div className={`table-controle-line table-controle-line_right ${tableOpen[2] ? "table-controle-line_right_open":""}`}></div>
                     </div>
                   </div>
-                  <div className={`product-type-wrapper ${tableOpen[2] ? "product-type-wrapper_open":""}`}>
-                    <div className={`product-type-box ${tableOpen[2] ? "product-type-box_open":""}`}>
-                      <div className="product-title-contaienr">
-                        <h4 className="product-title">オーダーメイド・ベース・モルト&nbsp;&minus;&nbsp;600JPY/kg</h4>
-                      </div>
-                        <div className="product-table">
-                          <p className="product-table-element">含水率:&nbsp;5.0% max</p>
-                          <p className="product-table-element">EBC:&nbsp;3-10</p>
-                          <p className="product-table-element">フェノール:&nbsp;XXXX ppm</p>
-                        </div>
-                      </div>
-                    <div className={`product-type-box ${tableOpen[2] ? "product-type-box_open":""}`}>
-                      <div className="product-title-contaienr">
-                        <h4 className="product-title">オーダーメイド・スモーク・モルト&nbsp;&minus;&nbsp;730JPY/kg</h4>
-                      </div>
-                      <div className="product-table">
-                        <p className="product-table-element">含水率:&nbsp;5.0% max</p>
-                        <p className="product-table-element">EBC:&nbsp;3-5</p>
-                        <p className="product-table-element">フェノール:&nbsp;5-15 ppm</p>
-                      </div>
-                    </div>
-                  </div>
+                  <table className={`product-type-wrapper ${tableOpen[2] ? "product-type-wrapper_open":""}`}>
+                    <tr className="product-table_tr">
+                      <th className="product-table_cell product-table_cell_header product-table_cell_type"></th>
+                      <th className="product-table_cell product-table_cell_header"><p>含水率</p><span className="product-table_span">(% max)</span></th>
+                      <th className="product-table_cell product-table_cell_header"><p>EBC</p></th>
+                      <th className="product-table_cell product-table_cell_header"><p>フェノール</p><span className="product-table_span">(ppm)</span></th>
+                      <th className="product-table_cell product-table_cell_header"><p>価格</p><span className="product-table_span">(円/kg)</span></th>
+                    </tr>
+                    <tr className="product-table_tr">
+                      <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_jp">オーダーメイド・ベース・モルト</h4></th>
+                      <td className="product-table_cell">5.0</td>
+                      <td className="product-table_cell">3-10</td>
+                      <td className="product-table_cell">XXXX</td>
+                      <td className="product-table_cell">600</td>
+                    </tr>
+                    <tr className="product-table_tr">
+                      <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_jp">オーダーメイド・スモーク・モルト</h4></th>
+                      <td className="product-table_cell">5.0</td>
+                      <td className="product-table_cell">3-5</td>
+                      <td className="product-table_cell">5-15</td>
+                      <td className="product-table_cell">730</td>
+                    </tr>
+                  </table>
                 </div>
               </div>
             </div>
