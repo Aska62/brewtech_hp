@@ -304,22 +304,22 @@ function Products() {
                       <th className="product-table_cell product-table_cell_header product-table_cell_type"></th>
                       <th className="product-table_cell product-table_cell_header"><p>含水率</p><span className="product-table_span">(% max)</span></th>
                       <th className="product-table_cell product-table_cell_header"><p>EBC</p></th>
-                      <th className="product-table_cell product-table_cell_header"><p>フェノール</p><span className="product-table_span">(ppm)</span></th>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_header_lg"><p>フェノール</p><span className="product-table_span">(ppm)</span></th>
                       <th className="product-table_cell product-table_cell_header"><p>価格</p><span className="product-table_span">(円/kg)</span></th>
                     </tr>
                     <tr className="product-table_tr">
-                      <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_jp">ディスティリング</h4></th>
-                      <td className="product-table_cell">{infoWhiskyDisitilling.moisture}</td>
-                      <td className="product-table_cell">{infoWhiskyDisitilling.ebc}</td>
-                      <td className="product-table_cell">{infoWhiskyDisitilling.phenoles}</td>
-                      <td className="product-table_cell">{infoWhiskyDisitilling.price}</td>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_type product-table_cell_type_jp"><h4>ディスティリング</h4></th>
+                      <td className="product-table_cell ">{infoWhiskyDisitilling.moisture}</td>
+                      <td className="product-table_cell ">{infoWhiskyDisitilling.ebc}</td>
+                      <td className="product-table_cell ">{infoWhiskyDisitilling.phenoles}</td>
+                      <td className="product-table_cell ">{infoWhiskyDisitilling.price}</td>
                     </tr>
                     <tr className="product-table_tr">
-                      <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_jp">ライト・ピーテッド</h4></th>
-                      <td className="product-table_cell">{infoWhiskyPeated.moisture}</td>
-                      <td className="product-table_cell">{infoWhiskyPeated.ebc}</td>
-                      <td className="product-table_cell">{infoWhiskyPeated.phenoles}</td>
-                      <td className="product-table_cell">{infoWhiskyPeated.price}</td>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_type product-table_cell_type_jp"><h4>ライト・ピーテッド</h4></th>
+                      <td className="product-table_cell ">{infoWhiskyPeated.moisture}</td>
+                      <td className="product-table_cell ">{infoWhiskyPeated.ebc}</td>
+                      <td className="product-table_cell ">{infoWhiskyPeated.phenoles}</td>
+                      <td className="product-table_cell ">{infoWhiskyPeated.price}</td>
                     </tr>
                   </table>
                 </div>
@@ -336,15 +336,15 @@ function Products() {
                       <th className="product-table_cell product-table_cell_header product-table_cell_type"></th>
                       <th className="product-table_cell product-table_cell_header"><p>含水率</p><span className="product-table_span">(% max)</span></th>
                       <th className="product-table_cell product-table_cell_header"><p>EBC</p></th>
-                      <th className="product-table_cell product-table_cell_header"><p>フェノール</p><span className="product-table_span">(ppm)</span></th>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_header_lg"><p>フェノール</p><span className="product-table_span">(ppm)</span></th>
                       <th className="product-table_cell product-table_cell_header"><p>価格</p><span className="product-table_span">(円/kg)</span></th>
                     </tr>
                     <tr className="product-table_tr">
-                      <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_jp">ピルスナー</h4></th>
-                      <td className="product-table_cell">{infoBeerPilsner.moisture}</td>
-                      <td className="product-table_cell">{infoBeerPilsner.ebc}</td>
-                      <td className="product-table_cell">{infoBeerPilsner.phenoles}</td>
-                      <td className="product-table_cell">{infoBeerPilsner.price}</td>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_type product-table_cell_type_jp"><h4>ピルスナー</h4></th>
+                      <td className="product-table_cell ">{infoBeerPilsner.moisture}</td>
+                      <td className="product-table_cell procuct-table_cell_elem_jp">{infoBeerPilsner.ebc}</td>
+                      <td className="product-table_cell ">{infoBeerPilsner.phenoles}</td>
+                      <td className="product-table_cell ">{infoBeerPilsner.price}</td>
                     </tr>
                   </table>
                 </div>
@@ -361,22 +361,22 @@ function Products() {
                       <th className="product-table_cell product-table_cell_header product-table_cell_type"></th>
                       <th className="product-table_cell product-table_cell_header"><p>含水率</p><span className="product-table_span">(% max)</span></th>
                       <th className="product-table_cell product-table_cell_header"><p>EBC</p></th>
-                      <th className="product-table_cell product-table_cell_header"><p>フェノール</p><span className="product-table_span">(ppm)</span></th>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_header_lg"><p>フェノール</p><span className="product-table_span">(ppm)</span></th>
                       <th className="product-table_cell product-table_cell_header"><p>価格</p><span className="product-table_span">(円/kg)</span></th>
                     </tr>
                     <tr className="product-table_tr">
-                      <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_jp">ベース・モルト</h4></th>
-                      <td className="product-table_cell">{infoOemBase.moisture}</td>
-                      <td className="product-table_cell">{infoOemBase.ebc}</td>
-                      <td className="product-table_cell">{infoOemBase.phenoles}</td>
-                      <td className="product-table_cell">{infoOemBase.price}</td>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_type product-table_cell_type_jp"><h4>ベース・モルト</h4></th>
+                      <td className="product-table_cell ">{infoOemBase.moisture}</td>
+                      <td className="product-table_cell ">{infoOemBase.ebc}</td>
+                      <td className="product-table_cell ">{infoOemBase.phenoles}</td>
+                      <td className="product-table_cell ">{infoOemBase.price}</td>
                     </tr>
                     <tr className="product-table_tr">
-                      <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_jp">スモーク・モルト</h4></th>
-                      <td className="product-table_cell">{infoOemSmoke.moisture}</td>
-                      <td className="product-table_cell">{infoOemSmoke.ebc}</td>
-                      <td className="product-table_cell">{infoOemSmoke.phenoles}</td>
-                      <td className="product-table_cell">{infoOemSmoke.price}</td>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_type product-table_cell_type_jp"><h4>スモーク・モルト</h4></th>
+                      <td className="product-table_cell ">{infoOemSmoke.moisture}</td>
+                      <td className="product-table_cell ">{infoOemSmoke.ebc}</td>
+                      <td className="product-table_cell ">{infoOemSmoke.phenoles}</td>
+                      <td className="product-table_cell ">{infoOemSmoke.price}</td>
                     </tr>
                   </table>
                 </div>
