@@ -19,6 +19,37 @@ function Products() {
     setTableOpen(newTableOpen);
   }
 
+  const infoWhiskyDisitilling = {
+    'moisture': '5.0',
+    'ebc': '3-5',
+    'phenoles': '',
+    'price': '650'
+  }
+  const infoWhiskyPeated = {
+    'moisture': '5.0',
+    'ebc': '3-5',
+    'phenoles': '5-15',
+    'price': '780'
+  }
+  const infoBeerPilsner = {
+    'moisture': '5.0',
+    'ebc': '3-5',
+    'phenoles': '',
+    'price': '650'
+  }
+  const infoOemBase = {
+    'moisture': '5.0',
+    'ebc': '3-10',
+    'phenoles': '',
+    'price': '600'
+  }
+  const infoOemSmoke = {
+    'moisture': '5.0',
+    'ebc': '3-10',
+    'phenoles': '5-15',
+    'price': '730-2000'
+  }
+
   switch (language) {
     case 'en':
       return (
@@ -52,17 +83,17 @@ function Products() {
                         </tr>
                         <tr className="product-table_tr">
                           <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_en">Distilling Malt</h4></th>
-                          <td className="product-table_cell">5.0</td>
-                          <td className="product-table_cell">3-5</td>
-                          <td className="product-table_cell">XXXX</td>
-                          <td className="product-table_cell">650</td>
+                          <td className="product-table_cell">{infoWhiskyDisitilling.moisture}</td>
+                          <td className="product-table_cell">{infoWhiskyDisitilling.ebc}</td>
+                          <td className="product-table_cell">{infoWhiskyDisitilling.phenoles}</td>
+                          <td className="product-table_cell">{infoWhiskyDisitilling.price}</td>
                         </tr>
                         <tr className="product-table_tr">
                           <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_en">Lightly Peated Malt</h4></th>
-                          <td className="product-table_cell">5.0</td>
-                          <td className="product-table_cell">3-5</td>
-                          <td className="product-table_cell">5-15</td>
-                          <td className="product-table_cell">780</td>
+                          <td className="product-table_cell">{infoWhiskyPeated.moisture}</td>
+                          <td className="product-table_cell">{infoWhiskyPeated.ebc}</td>
+                          <td className="product-table_cell">{infoWhiskyPeated.phenoles}</td>
+                          <td className="product-table_cell">{infoWhiskyPeated.price}</td>
                         </tr>
                       </table>
                     </div>
@@ -84,16 +115,16 @@ function Products() {
                         </tr>
                         <tr className="product-table_tr">
                           <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_en">Pilsner Malt</h4></th>
-                          <td className="product-table_cell">5.0</td>
-                          <td className="product-table_cell">3-5</td>
-                          <td className="product-table_cell">XXXX</td>
-                          <td className="product-table_cell">650</td>
+                          <td className="product-table_cell">{infoBeerPilsner.moisture}</td>
+                          <td className="product-table_cell">{infoBeerPilsner.ebc}</td>
+                          <td className="product-table_cell">{infoBeerPilsner.phenoles}</td>
+                          <td className="product-table_cell">{infoBeerPilsner.price}</td>
                         </tr>
                       </table>
                     </div>
                     <div className="product-detail-box">
                       <div className="product-category_box" onClick={()=>onTitleClick(2)}>
-                        <h3 className="product-category style-font">OEM</h3>
+                        <h3 className="product-category style-font">OEM (Customization)</h3>
                         <div className={`table-control-container ${tableOpen[2] ? "table-control-container_open":""}`}>
                           <div className={`table-controle-line table-controle-line_left ${tableOpen[2] ? "table-controle-line_left_open":""}`}></div>
                           <div className={`table-controle-line table-controle-line_right ${tableOpen[2] ? "table-controle-line_right_open":""}`}></div>
@@ -108,18 +139,18 @@ function Products() {
                           <th className="product-table_cell product-table_cell_header"><p>Price</p><span className="product-table_span">(JPY/kg)</span></th>
                         </tr>
                         <tr className="product-table_tr">
-                          <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_en">Customized-Base Malt</h4></th>
-                          <td className="product-table_cell">5.0</td>
-                          <td className="product-table_cell">3-10</td>
-                          <td className="product-table_cell">XXXX</td>
-                          <td className="product-table_cell">600</td>
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_en">Base Malt</h4></th>
+                          <td className="product-table_cell">{infoOemBase.moisture}</td>
+                          <td className="product-table_cell">{infoOemBase.ebc}</td>
+                          <td className="product-table_cell">{infoOemBase.phenoles}</td>
+                          <td className="product-table_cell">{infoOemBase.price}</td>
                         </tr>
                         <tr className="product-table_tr">
-                          <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_en">Customized-Smoked Malt</h4></th>
-                          <td className="product-table_cell">5.0</td>
-                          <td className="product-table_cell">3-5</td>
-                          <td className="product-table_cell">5-15</td>
-                          <td className="product-table_cell">730</td>
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_en">Smoked Malt</h4></th>
+                          <td className="product-table_cell">{infoOemSmoke.moisture}</td>
+                          <td className="product-table_cell">{infoOemSmoke.ebc}</td>
+                          <td className="product-table_cell">{infoOemSmoke.phenoles}</td>
+                          <td className="product-table_cell">{infoOemSmoke.price}</td>
                         </tr>
                       </table>
                     </div>
@@ -149,7 +180,7 @@ function Products() {
                   <div className="product-detail-cotainer">
                     <div className="product-detail-box">
                       <div className="product-category_box" onClick={()=>onTitleClick(0)}>
-                        <h3 className="product-category style-font_cn">威士忌用</h3>
+                        <h3 className="product-category style-font_cn">威士忌用麦芽</h3>
                         <div className={`table-control-container ${tableOpen[0] ? "table-control-container_open":""}`}>
                           <div className={`table-controle-line table-controle-line_left ${tableOpen[0] ? "table-controle-line_left_open":""}`}></div>
                           <div className={`table-controle-line table-controle-line_right ${tableOpen[0] ? "table-controle-line_right_open":""}`}></div>
@@ -165,23 +196,23 @@ function Products() {
                         </tr>
                         <tr className="product-table_tr">
                           <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_cn">蒸馏麦芽</h4></th>
-                          <td className="product-table_cell">5.0</td>
-                          <td className="product-table_cell">3-5</td>
-                          <td className="product-table_cell">XXXX</td>
-                          <td className="product-table_cell">650</td>
+                          <td className="product-table_cell">{infoWhiskyDisitilling.moisture}</td>
+                          <td className="product-table_cell">{infoWhiskyDisitilling.ebc}</td>
+                          <td className="product-table_cell">{infoWhiskyDisitilling.phenoles}</td>
+                          <td className="product-table_cell">{infoWhiskyDisitilling.price}</td>
                         </tr>
                         <tr className="product-table_tr">
                           <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_cn">轻度泥煤麦芽</h4></th>
-                          <td className="product-table_cell">5.0</td>
-                          <td className="product-table_cell">3-5</td>
-                          <td className="product-table_cell">5-15</td>
-                          <td className="product-table_cell">780</td>
+                          <td className="product-table_cell">{infoWhiskyPeated.moisture}</td>
+                          <td className="product-table_cell">{infoWhiskyPeated.ebc}</td>
+                          <td className="product-table_cell">{infoWhiskyPeated.phenoles}</td>
+                          <td className="product-table_cell">{infoWhiskyPeated.price}</td>
                         </tr>
                       </table>
                     </div>
                     <div className="product-detail-box">
                       <div className="product-category_box" onClick={()=>onTitleClick(1)}>
-                        <h3 className="product-category style-font_cn">啤酒用</h3>
+                        <h3 className="product-category style-font_cn">啤酒用麦芽</h3>
                         <div className={`table-control-container ${tableOpen[1] ? "table-control-container_open":""}`}>
                           <div className={`table-controle-line table-controle-line_left ${tableOpen[1] ? "table-controle-line_left_open":""}`}></div>
                           <div className={`table-controle-line table-controle-line_right ${tableOpen[1] ? "table-controle-line_right_open":""}`}></div>
@@ -197,16 +228,16 @@ function Products() {
                         </tr>
                         <tr className="product-table_tr">
                           <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_cn">皮尔森麦芽</h4></th>
-                          <td className="product-table_cell">5.0</td>
-                          <td className="product-table_cell">3-5</td>
-                          <td className="product-table_cell">XXXX</td>
-                          <td className="product-table_cell">650</td>
+                          <td className="product-table_cell">{infoBeerPilsner.moisture}</td>
+                          <td className="product-table_cell">{infoBeerPilsner.ebc}</td>
+                          <td className="product-table_cell">{infoBeerPilsner.phenoles}</td>
+                          <td className="product-table_cell">{infoBeerPilsner.price}</td>
                         </tr>
                       </table>
                     </div>
                     <div className="product-detail-box">
                       <div className="product-category_box" onClick={()=>onTitleClick(2)}>
-                        <h3 className="product-category style-font_cn">OEM</h3>
+                        <h3 className="product-category style-font_cn">OEM麦芽 (接受定制)</h3>
                         <div className={`table-control-container ${tableOpen[2] ? "table-control-container_open":""}`}>
                           <div className={`table-controle-line table-controle-line_left ${tableOpen[2] ? "table-controle-line_left_open":""}`}></div>
                           <div className={`table-controle-line table-controle-line_right ${tableOpen[2] ? "table-controle-line_right_open":""}`}></div>
@@ -221,18 +252,18 @@ function Products() {
                           <th className="product-table_cell product-table_cell_header"><p>价格</p><span className="product-table_span">(JPY/kg)</span></th>
                         </tr>
                         <tr className="product-table_tr">
-                          <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_cn">接受定制-基础麦芽</h4></th>
-                          <td className="product-table_cell">5.0</td>
-                          <td className="product-table_cell">3-10</td>
-                          <td className="product-table_cell">XXXX</td>
-                          <td className="product-table_cell">600</td>
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_cn">基础麦芽</h4></th>
+                          <td className="product-table_cell">{infoOemBase.moisture}</td>
+                          <td className="product-table_cell">{infoOemBase.ebc}</td>
+                          <td className="product-table_cell">{infoOemBase.phenoles}</td>
+                          <td className="product-table_cell">{infoOemBase.price}</td>
                         </tr>
                         <tr className="product-table_tr">
-                          <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_cn">接受定制-烟熏麦芽</h4></th>
-                          <td className="product-table_cell">5.0</td>
-                          <td className="product-table_cell">3-5</td>
-                          <td className="product-table_cell">5-15</td>
-                          <td className="product-table_cell">730</td>
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_cn">烟熏麦芽</h4></th>
+                          <td className="product-table_cell">{infoOemSmoke.moisture}</td>
+                          <td className="product-table_cell">{infoOemSmoke.ebc}</td>
+                          <td className="product-table_cell">{infoOemSmoke.phenoles}</td>
+                          <td className="product-table_cell">{infoOemSmoke.price}</td>
                         </tr>
                       </table>
                     </div>
@@ -262,7 +293,7 @@ function Products() {
               <div className="product-detail-cotainer">
                 <div className="product-detail-box">
                   <div className="product-category_box" onClick={()=>onTitleClick(0)}>
-                    <h3 className="product-category style-font_jp">ウイスキー用</h3>
+                    <h3 className="product-category style-font_jp">ウイスキー用モルト</h3>
                     <div className={`table-control-container ${tableOpen[0] ? "table-control-container_open":""}`}>
                       <div className={`table-controle-line table-controle-line_left ${tableOpen[0] ? "table-controle-line_left_open":""}`}></div>
                       <div className={`table-controle-line table-controle-line_right ${tableOpen[0] ? "table-controle-line_right_open":""}`}></div>
@@ -277,24 +308,24 @@ function Products() {
                       <th className="product-table_cell product-table_cell_header"><p>価格</p><span className="product-table_span">(円/kg)</span></th>
                     </tr>
                     <tr className="product-table_tr">
-                      <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_jp">ディスティリング・モルト</h4></th>
-                      <td className="product-table_cell">5.0</td>
-                      <td className="product-table_cell">3-5</td>
-                      <td className="product-table_cell">XXXX</td>
-                      <td className="product-table_cell">650</td>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_jp">ディスティリング</h4></th>
+                      <td className="product-table_cell">{infoWhiskyDisitilling.moisture}</td>
+                      <td className="product-table_cell">{infoWhiskyDisitilling.ebc}</td>
+                      <td className="product-table_cell">{infoWhiskyDisitilling.phenoles}</td>
+                      <td className="product-table_cell">{infoWhiskyDisitilling.price}</td>
                     </tr>
                     <tr className="product-table_tr">
-                      <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_jp">ライト・ピーテッド・モルト</h4></th>
-                      <td className="product-table_cell">5.0</td>
-                      <td className="product-table_cell">3-5</td>
-                      <td className="product-table_cell">5-15</td>
-                      <td className="product-table_cell">780</td>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_jp">ライト・ピーテッド</h4></th>
+                      <td className="product-table_cell">{infoWhiskyPeated.moisture}</td>
+                      <td className="product-table_cell">{infoWhiskyPeated.ebc}</td>
+                      <td className="product-table_cell">{infoWhiskyPeated.phenoles}</td>
+                      <td className="product-table_cell">{infoWhiskyPeated.price}</td>
                     </tr>
                   </table>
                 </div>
                 <div className="product-detail-box">
                   <div className="product-category_box" onClick={()=>onTitleClick(1)}>
-                    <h3 className="product-category style-font_jp">ビール用</h3>
+                    <h3 className="product-category style-font_jp">ビール用モルト</h3>
                     <div className={`table-control-container ${tableOpen[1] ? "table-control-container_open":""}`}>
                       <div className={`table-controle-line table-controle-line_left ${tableOpen[1] ? "table-controle-line_left_open":""}`}></div>
                       <div className={`table-controle-line table-controle-line_right ${tableOpen[1] ? "table-controle-line_right_open":""}`}></div>
@@ -309,17 +340,17 @@ function Products() {
                       <th className="product-table_cell product-table_cell_header"><p>価格</p><span className="product-table_span">(円/kg)</span></th>
                     </tr>
                     <tr className="product-table_tr">
-                      <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_jp">ピルスナー・モルト</h4></th>
-                      <td className="product-table_cell">5.0</td>
-                      <td className="product-table_cell">3-5</td>
-                      <td className="product-table_cell">XXXX</td>
-                      <td className="product-table_cell">650</td>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_jp">ピルスナー</h4></th>
+                      <td className="product-table_cell">{infoBeerPilsner.moisture}</td>
+                      <td className="product-table_cell">{infoBeerPilsner.ebc}</td>
+                      <td className="product-table_cell">{infoBeerPilsner.phenoles}</td>
+                      <td className="product-table_cell">{infoBeerPilsner.price}</td>
                     </tr>
                   </table>
                 </div>
                 <div className="product-detail-box">
                   <div className="product-category_box" onClick={()=>onTitleClick(2)}>
-                    <h3 className="product-category style-font_jp">OEM</h3>
+                    <h3 className="product-category style-font_jp">OEMモルト (オーダーメイド)</h3>
                     <div className={`table-control-container ${tableOpen[2] ? "table-control-container_open":""}`}>
                       <div className={`table-controle-line table-controle-line_left ${tableOpen[2] ? "table-controle-line_left_open":""}`}></div>
                       <div className={`table-controle-line table-controle-line_right ${tableOpen[2] ? "table-controle-line_right_open":""}`}></div>
@@ -334,18 +365,18 @@ function Products() {
                       <th className="product-table_cell product-table_cell_header"><p>価格</p><span className="product-table_span">(円/kg)</span></th>
                     </tr>
                     <tr className="product-table_tr">
-                      <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_jp">オーダーメイド・ベース・モルト</h4></th>
-                      <td className="product-table_cell">5.0</td>
-                      <td className="product-table_cell">3-10</td>
-                      <td className="product-table_cell">XXXX</td>
-                      <td className="product-table_cell">600</td>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_jp">ベース・モルト</h4></th>
+                      <td className="product-table_cell">{infoOemBase.moisture}</td>
+                      <td className="product-table_cell">{infoOemBase.ebc}</td>
+                      <td className="product-table_cell">{infoOemBase.phenoles}</td>
+                      <td className="product-table_cell">{infoOemBase.price}</td>
                     </tr>
                     <tr className="product-table_tr">
-                      <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_jp">オーダーメイド・スモーク・モルト</h4></th>
-                      <td className="product-table_cell">5.0</td>
-                      <td className="product-table_cell">3-5</td>
-                      <td className="product-table_cell">5-15</td>
-                      <td className="product-table_cell">730</td>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_jp">スモーク・モルト</h4></th>
+                      <td className="product-table_cell">{infoOemSmoke.moisture}</td>
+                      <td className="product-table_cell">{infoOemSmoke.ebc}</td>
+                      <td className="product-table_cell">{infoOemSmoke.phenoles}</td>
+                      <td className="product-table_cell">{infoOemSmoke.price}</td>
                     </tr>
                   </table>
                 </div>
