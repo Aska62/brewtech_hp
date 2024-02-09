@@ -123,6 +123,11 @@
   height: 2.4rem;
   vertical-align: text-top;
 }
+.product-table_cell_header_lg p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .product-table_cell_type {
   width: 30%;
   text-align: right;
@@ -148,6 +153,7 @@
   font-size: .7rem;
   line-height: 1;
   margin: 0;
+  text-wrap: nowrap;
 }
 .product-table_span {
   display: inline-block;
@@ -205,6 +211,9 @@
   }
   .product-table_cell {
     font-size: .8rem;
+  }
+  .product-table_cell_sm {
+    width: 12%;
   }
   .product-table_cell_header h4 {
     font-size: .7rem;

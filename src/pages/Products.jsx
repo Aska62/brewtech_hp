@@ -302,10 +302,10 @@ function Products() {
                   <table className={`product-type-wrapper ${tableOpen[0] ? "product-type-wrapper_open":""}`}>
                     <tr className="product-table_tr">
                       <th className="product-table_cell product-table_cell_header product-table_cell_type"></th>
-                      <th className="product-table_cell product-table_cell_header"><p>含水率</p><span className="product-table_span">(% max)</span></th>
-                      <th className="product-table_cell product-table_cell_header"><p>EBC</p></th>
-                      <th className="product-table_cell product-table_cell_header product-table_cell_header_lg"><p>フェノール</p><span className="product-table_span">(ppm)</span></th>
-                      <th className="product-table_cell product-table_cell_header"><p>価格</p><span className="product-table_span">(円/kg)</span></th>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_sm"><p>含水率</p><span className="product-table_span">(% max)</span></th>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_sm"><p>EBC</p></th>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_sm product-table_cell_header_lg"><p>フェノール</p><span className="product-table_span">(ppm)</span></th>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_sm"><p>価格</p><span className="product-table_span">(円/kg)</span></th>
                     </tr>
                     <tr className="product-table_tr">
                       <th className="product-table_cell product-table_cell_header product-table_cell_type product-table_cell_type_jp"><h4>ディスティリング</h4></th>
@@ -334,10 +334,10 @@ function Products() {
                   <table className={`product-type-wrapper ${tableOpen[1] ? "product-type-wrapper_open":""}`}>
                     <tr className="product-table_tr">
                       <th className="product-table_cell product-table_cell_header product-table_cell_type"></th>
-                      <th className="product-table_cell product-table_cell_header"><p>含水率</p><span className="product-table_span">(% max)</span></th>
-                      <th className="product-table_cell product-table_cell_header"><p>EBC</p></th>
-                      <th className="product-table_cell product-table_cell_header product-table_cell_header_lg"><p>フェノール</p><span className="product-table_span">(ppm)</span></th>
-                      <th className="product-table_cell product-table_cell_header"><p>価格</p><span className="product-table_span">(円/kg)</span></th>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_sm"><p>含水率</p><span className="product-table_span">(% max)</span></th>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_sm"><p>EBC</p></th>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_sm product-table_cell_header_lg"><p>フェノール</p><span className="product-table_span">(ppm)</span></th>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_sm"><p>価格</p><span className="product-table_span">(円/kg)</span></th>
                     </tr>
                     <tr className="product-table_tr">
                       <th className="product-table_cell product-table_cell_header product-table_cell_type product-table_cell_type_jp"><h4>ピルスナー</h4></th>
@@ -359,10 +359,10 @@ function Products() {
                   <table className={`product-type-wrapper ${tableOpen[2] ? "product-type-wrapper_open":""}`}>
                     <tr className="product-table_tr">
                       <th className="product-table_cell product-table_cell_header product-table_cell_type"></th>
-                      <th className="product-table_cell product-table_cell_header"><p>含水率</p><span className="product-table_span">(% max)</span></th>
-                      <th className="product-table_cell product-table_cell_header"><p>EBC</p></th>
-                      <th className="product-table_cell product-table_cell_header product-table_cell_header_lg"><p>フェノール</p><span className="product-table_span">(ppm)</span></th>
-                      <th className="product-table_cell product-table_cell_header"><p>価格</p><span className="product-table_span">(円/kg)</span></th>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_sm"><p>含水率</p><span className="product-table_span">(% max)</span></th>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_sm"><p>EBC</p></th>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_sm product-table_cell_header_lg"><p>フェノール</p><span className="product-table_span">(ppm)</span></th>
+                      <th className="product-table_cell product-table_cell_header product-table_cell_sm"><p>価格</p><span className="product-table_span">(円/kg)</span></th>
                     </tr>
                     <tr className="product-table_tr">
                       <th className="product-table_cell product-table_cell_header product-table_cell_type product-table_cell_type_jp"><h4>ベース・モルト</h4></th>
