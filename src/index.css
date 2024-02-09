@@ -243,9 +243,6 @@ footer {
   font-size: .8rem;
   line-height: 1.8rem;
   color: rgb(150, 150, 150);
-  position: fixed;
-  bottom: 0;
-  right: 0;
 }
 
 /* Tablet */
