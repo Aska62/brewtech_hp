@@ -119,9 +119,15 @@
   width: 20%;
   height: 1.2rem;
 }
+.product-table_cell_header {
+  height: 2.4rem;
+  vertical-align: text-top;
+}
 .product-table_cell_type {
   width: 30%;
   text-align: right;
+  height: unset;
+
 }
 .product-table_cell_type h4 {
   display: block;
