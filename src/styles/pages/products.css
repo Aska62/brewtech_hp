@@ -127,6 +127,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-wrap: nowrap;
 }
 .product-table_cell_type {
   width: 30%;
@@ -226,17 +227,6 @@
   .product-table_cell_header p, .product-table_cell_header span {
     font-size: .6rem;
     text-wrap: nowrap;
-  }
-  .product-table_cell_header_lg p {
-    text-wrap: nowrap;
-  }
-  .product-table_tr_sp {
-    display: table;
-    text-align: center;
-  }
-  .table-cell_sp {
-    text-wrap: wrap;
-    height: 3rem;
   }
 }
 
