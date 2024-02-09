@@ -194,22 +194,19 @@
     font-size: 1.1rem;
   }
   .product-type-wrapper {
-    table-layout: auto;
+    table-layout: fixed;
+    border-collapse: collapse;
   }
   .product-table_cell {
     font-size: .8rem;
   }
-  .product-table_cell_type_jp {
-    text-wrap: nowrap;
-  }
   .product-table_cell_header h4 {
     font-size: .7rem;
-    text-wrap: wrap;
   }
   .product-table_cell_type_jp h4 {
     font-size: .65rem;
     font-weight: 400;
-    text-wrap: nowrap;
+    text-wrap: wrap;
   }
   .product-table_cell_header p, .product-table_cell_header span {
     font-size: .6rem;
