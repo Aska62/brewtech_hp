@@ -177,7 +177,7 @@
   text-align: center;
   line-height: 1;
   margin-bottom: 3px;
-  font-weight: 600;
+  font-weight: 700;
 }
 .product-table_note_ul {
   margin-top: 0;
@@ -285,7 +285,7 @@
   }
   .product-table_note_ul {
     margin: 0;
-    padding: 0 0 0 0.7rem;
+    padding: 0 0 0 1rem;
   }
 }
 
