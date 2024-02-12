@@ -166,21 +166,24 @@
   text-align: left;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 300;
-  font-size: .7rem;
+  font-size: .8rem;
   line-height: 1.3;
 }
 .product-table_cell_fullwidth div {
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
 }
 .product-table_note-head {
   text-align: center;
   line-height: 1;
   margin-bottom: 3px;
+  font-size: .9rem;
   font-weight: 700;
+  margin-bottom: .5rem;
 }
 .product-table_note_ul {
   margin-top: 0;
+  padding-left: .7rem;
 }
 .product-table_note_li {
   list-style-type: circle;
@@ -211,9 +214,6 @@
   }
   .product-category {
     font-size: 1.2rem;
-  }
-  .product-table_cell_fullwidth div {
-    width: 100%;
   }
 }
 
@@ -276,6 +276,7 @@
     width: 100%;
     margin: 0;
     padding: 0;
+    font-size: .7rem;
   }
   .product-table_note_ul {
     margin: 0;
