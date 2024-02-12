@@ -200,9 +200,6 @@
 .product-table_note_num-span {
   font-family: 'Noto Sans JP', sans-serif;
 }
-.mb-br {
-  display: none;
-}
 
 /* Tablet*/
 @media only screen and (max-width:890px) {
@@ -217,9 +214,6 @@
   }
   .product-table_cell_fullwidth div {
     width: 100%;
-  }
-  .mb-br {
-    display: block;
   }
 }
 
