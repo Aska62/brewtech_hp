@@ -378,6 +378,48 @@ function Products() {
                       <td className="product-table_cell ">{infoOemSmoke.phenoles}</td>
                       <td className="product-table_cell ">{infoOemSmoke.price}</td>
                     </tr>
+                    <tr>
+                      <td className="product-table_cell product-table_cell_fullwidth" colspan="5">
+                        <div>
+                          <p className="product-table_note-head">注意事項</p>
+                          <ul className="product-table_note_ul">
+                            <li className="product-table_note_li">
+                              お客様の穀物を麦芽にするために事前に穀物の検査をいたします。<br/>
+                              異物が多い・発芽率が低い・虫が発生している・赤カビがある場合は加工をお断りする場合がございます。
+                            </li>
+                            <li className="product-table_note_li">
+                              完成した麦芽の収率は約<span className="product-table_note_num-span">85&#037;</span>となります。<br/>
+                              穀物の種類と質によっては<span className="product-table_note_num-span">80&#037;</span>を下回ることもあります。<br/>
+                              &#032;例&#041;大麦<span className="product-table_note_num-span">100kg</span>から麦芽が<span className="product-table_note_num-span">85kg</span>できます。
+                            </li>
+                            <li className="product-table_note_li">
+                              製造費用計算方法
+                              <ul className="product-table_note_ul_md">
+                                <li className="product-table_note_li_md">お客様がご提供する大麦を麦芽にする場合：
+                                  <ul className="product-table_note_ul_sm">
+                                    <li className="product-table_note_li_sm">【ベース・モルト】&emsp;<br className="mb-br"/>大麦重量<span className="product-table_note_num-span">&#040;kg&#041;&times;85&#037;&times;600</span>円<span className="product-table_note_num-span">&#061;</span>製造費用</li>
+                                    <li className="product-table_note_li_sm">【スモーク・モルト】<br className="mb-br"/>大麦重量<span className="product-table_note_num-span">&#040;kg&#041;&times;85&#037;&times;730</span>円<span className="product-table_note_num-span">&#061;</span>製造費用</li>
+                                  </ul>
+                                </li>
+                                <li className="product-table_note_li_md">弊社で用意した大麦を麦芽にする場合：
+                                    <ul className="product-table_note_ul_sm">
+                                      <li className="product-table_note_li_sm">【ベース・モルト】&emsp;<br className="mb-br"/>大麦重量<span className="product-table_note_num-span">&#040;kg&#041;&times;85&#037;&times;650</span>円<span className="product-table_note_num-span">&#061;</span>製造費用</li>
+                                      <li className="product-table_note_li_sm">【スモーク・モルト】<br className="mb-br"/>大麦重量<span className="product-table_note_num-span">&#040;kg&#041;&times;85&#037;&times;780-2000</span>円<span className="product-table_note_num-span">&#061;</span>製造費用</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                            <li className="product-table_note_li">
+                              注意
+                              <ul className="product-table_note_ul_md">
+                                <li className="product-table_note_li_md">お客様がご提供する穀物&#040;大麦が含まれる&#041;を使用する場合と、特別な麦芽製法のリクエストがある場合は、麦芽の品質は弊社が保証しかねません。</li>
+                                <li className="product-table_note_li_md">穀物の種類と麦芽製法により、製造費用が異なる場合があります。</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
                   </table>
                 </div>
               </div>
