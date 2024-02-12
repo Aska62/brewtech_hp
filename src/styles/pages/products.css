@@ -177,7 +177,7 @@
   text-align: center;
   line-height: 1;
   margin-bottom: 3px;
-  font-weight: 400;
+  font-weight: 600;
 }
 .product-table_note_ul {
   margin-top: 0;
@@ -185,10 +185,9 @@
 .product-table_note_li {
   list-style-type: circle;
   line-height: 1.6;
-  width: calc(100% - 1rem);
 }
 .product-table_note_ul_md {
-  margin-left: 0.3rem;
+  margin-left: .7rem;
   padding: 0;
 }
 .product-table_note_li_md {
@@ -281,6 +280,12 @@
   }
   .product-table_cell_fullwidth {
     width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .product-table_note_ul {
+    margin: 0;
+    padding: 0 0.7rem;
   }
 }
 
