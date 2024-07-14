@@ -430,8 +430,8 @@ function Products() {
                                 製造費用計算方法<br/>
                                 お客様の穀物&#040;大麦を含む&#041;を使用する場合や、特別な麦芽製法のリクエストがある場合：
                                 <ul className="product-table_note_ul_sm">
-                                  <li className="product-table_note_li_sm">【ベース・モルト】&emsp;<br/>大麦重量<span className="product-table_note_num-span">kg&#040;原料&#041;&times;85&#037;&#040;収率&#041;&times;400&#040;単価&#041;</span>円<span className="product-table_note_num-span">&#061;</span>製造費用</li>
-                                  <li className="product-table_note_li_sm">【スモーク・モルト】<br/>大麦重量<span className="product-table_note_num-span">kg&#040;原料&#041;&times;85&#037;&#040;収率&#041;&times;450-2000&#040;単価&#041;</span>円<span className="product-table_note_num-span">&#061;</span>製造費用</li>
+                                  <li className="product-table_note_li_sm">【ベース・モルト】&emsp;<br/>大麦重量<span className="product-table_note_num-span">kg&#040;原料&#041;&times;85&#037;&#040;収率&#041;&times;400円&#040;単価&#041;</span><span className="product-table_note_num-span">&#061;</span>製造費用</li>
+                                  <li className="product-table_note_li_sm">【スモーク・モルト】<br/>大麦重量<span className="product-table_note_num-span">kg&#040;原料&#041;&times;85&#037;&#040;収率&#041;&times;450-2000円&#040;単価&#041;</span><span className="product-table_note_num-span">&#061;</span>製造費用</li>
                                 </ul>
                               </li>
                               <li className="product-table_note_li">
