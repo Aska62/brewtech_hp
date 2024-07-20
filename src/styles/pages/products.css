@@ -36,7 +36,8 @@
 }
 
 .product-detail-cotainer {
-  width: 80%;
+  width: 100%;
+  max-width: 48rem;
   margin: 5rem auto;
   z-index: 5;
   text-align: center;
@@ -130,7 +131,7 @@
 }
 .product-table_cell_type {
   width: 30%;
-  text-align: right;
+  text-align: left;
   height: unset;
 
 }
@@ -144,7 +145,7 @@
   line-height: 1.2;
 }
 .product-table_cell_type_jp, .product-table_cell_type_cn {
-  text-align: right;
+  text-align: left;
   font-size: .8rem;
   font-weight: 300;
 }
