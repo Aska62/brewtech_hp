@@ -3,6 +3,11 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import LangBar from "../components/LangBar";
 import LanguageContext from "../context/LanguageContext";
+import {
+  whiskyMaltsData,
+  beerMaltsData,
+  oemMaltsData
+} from "../lib/constants.js";
 
 function Products() {
   const { language } = useContext(LanguageContext);
@@ -17,37 +22,6 @@ function Products() {
     let newTableOpen = [...tableOpen];
     newTableOpen[id] = !tableOpen[id];
     setTableOpen(newTableOpen);
-  }
-
-  const infoWhiskyDisitilling = {
-    'moisture': '5.0',
-    'ebc': '3-5',
-    'phenoles': '',
-    'price': '650'
-  }
-  const infoWhiskyPeated = {
-    'moisture': '5.0',
-    'ebc': '3-5',
-    'phenoles': '5-15',
-    'price': '780'
-  }
-  const infoBeerPilsner = {
-    'moisture': '5.0',
-    'ebc': '3-5',
-    'phenoles': '',
-    'price': '650'
-  }
-  const infoOemBase = {
-    'moisture': '5.0',
-    'ebc': '3-10',
-    'phenoles': '',
-    'price': '600'
-  }
-  const infoOemSmoke = {
-    'moisture': '5.0',
-    'ebc': '3-10',
-    'phenoles': '5-15',
-    'price': '730-2000'
   }
 
   switch (language) {
@@ -84,20 +58,15 @@ function Products() {
                           </tr>
                         </thead>
                         <tbody>
-                          <tr className="product-table_tr">
-                            <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_en">Distilling Malt</h4></th>
-                            <td className="product-table_cell">{infoWhiskyDisitilling.moisture}</td>
-                            <td className="product-table_cell">{infoWhiskyDisitilling.ebc}</td>
-                            <td className="product-table_cell">{infoWhiskyDisitilling.phenoles}</td>
-                            <td className="product-table_cell">{infoWhiskyDisitilling.price}</td>
-                          </tr>
-                          <tr className="product-table_tr">
-                            <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_en">Lightly Peated Malt</h4></th>
-                            <td className="product-table_cell">{infoWhiskyPeated.moisture}</td>
-                            <td className="product-table_cell">{infoWhiskyPeated.ebc}</td>
-                            <td className="product-table_cell">{infoWhiskyPeated.phenoles}</td>
-                            <td className="product-table_cell">{infoWhiskyPeated.price}</td>
-                          </tr>
+                          {whiskyMaltsData.map((data) =>(
+                            <tr className="product-table_tr" key={data.nameEN}>
+                              <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_en">{data.nameEN}</h4></th>
+                              <td className="product-table_cell">{data.moisture}</td>
+                              <td className="product-table_cell">{data.ebc}</td>
+                              <td className="product-table_cell">{data.phenoles}</td>
+                              <td className="product-table_cell">{data.price}</td>
+                            </tr>
+                          ))}
                         </tbody>
                       </table>
                     </div>
@@ -120,13 +89,15 @@ function Products() {
                           </tr>
                         </thead>
                         <tbody>
-                          <tr className="product-table_tr">
-                            <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_en">Pilsner Malt</h4></th>
-                            <td className="product-table_cell">{infoBeerPilsner.moisture}</td>
-                            <td className="product-table_cell">{infoBeerPilsner.ebc}</td>
-                            <td className="product-table_cell">{infoBeerPilsner.phenoles}</td>
-                            <td className="product-table_cell">{infoBeerPilsner.price}</td>
-                          </tr>
+                          {beerMaltsData.map((data) =>(
+                            <tr className="product-table_tr" key={data.nameEN}>
+                              <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_en">{data.nameEN}</h4></th>
+                              <td className="product-table_cell">{data.moisture}</td>
+                              <td className="product-table_cell">{data.ebc}</td>
+                              <td className="product-table_cell">{data.phenoles}</td>
+                              <td className="product-table_cell">{data.price}</td>
+                            </tr>
+                          ))}
                         </tbody>
                       </table>
                     </div>
@@ -149,20 +120,15 @@ function Products() {
                           </tr>
                         </thead>
                         <tbody>
-                          <tr className="product-table_tr">
-                            <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_en">Base Malt</h4></th>
-                            <td className="product-table_cell">{infoOemBase.moisture}</td>
-                            <td className="product-table_cell">{infoOemBase.ebc}</td>
-                            <td className="product-table_cell">{infoOemBase.phenoles}</td>
-                            <td className="product-table_cell">{infoOemBase.price}</td>
-                          </tr>
-                          <tr className="product-table_tr">
-                            <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_en">Smoked Malt</h4></th>
-                            <td className="product-table_cell">{infoOemSmoke.moisture}</td>
-                            <td className="product-table_cell">{infoOemSmoke.ebc}</td>
-                            <td className="product-table_cell">{infoOemSmoke.phenoles}</td>
-                            <td className="product-table_cell">{infoOemSmoke.price}</td>
-                          </tr>
+                          {oemMaltsData.map((data) =>(
+                            <tr className="product-table_tr" key={data.nameEN}>
+                              <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_en">{data.nameEN}</h4></th>
+                              <td className="product-table_cell">{data.moisture}</td>
+                              <td className="product-table_cell">{data.ebc}</td>
+                              <td className="product-table_cell">{data.phenoles}</td>
+                              <td className="product-table_cell">{data.price}</td>
+                            </tr>
+                          ))}
                         </tbody>
                       </table>
                     </div>
@@ -208,20 +174,15 @@ function Products() {
                           </tr>
                         </thead>
                         <tbody>
-                          <tr className="product-table_tr">
-                            <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_cn">蒸馏麦芽</h4></th>
-                            <td className="product-table_cell">{infoWhiskyDisitilling.moisture}</td>
-                            <td className="product-table_cell">{infoWhiskyDisitilling.ebc}</td>
-                            <td className="product-table_cell">{infoWhiskyDisitilling.phenoles}</td>
-                            <td className="product-table_cell">{infoWhiskyDisitilling.price}</td>
+                          {whiskyMaltsData.map((data) => (
+                            <tr className="product-table_tr" key={data.nameEN}>
+                            <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_cn">{data.nameCN}</h4></th>
+                            <td className="product-table_cell">{data.moisture}</td>
+                            <td className="product-table_cell">{data.ebc}</td>
+                            <td className="product-table_cell">{data.phenoles}</td>
+                            <td className="product-table_cell">{data.price}</td>
                           </tr>
-                          <tr className="product-table_tr">
-                            <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_cn">轻度泥煤麦芽</h4></th>
-                            <td className="product-table_cell">{infoWhiskyPeated.moisture}</td>
-                            <td className="product-table_cell">{infoWhiskyPeated.ebc}</td>
-                            <td className="product-table_cell">{infoWhiskyPeated.phenoles}</td>
-                            <td className="product-table_cell">{infoWhiskyPeated.price}</td>
-                          </tr>
+                          ))}
                         </tbody>
                       </table>
                     </div>
@@ -244,13 +205,15 @@ function Products() {
                           </tr>
                         </thead>
                         <tbody>
-                          <tr className="product-table_tr">
-                            <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_cn">皮尔森麦芽</h4></th>
-                            <td className="product-table_cell">{infoBeerPilsner.moisture}</td>
-                            <td className="product-table_cell">{infoBeerPilsner.ebc}</td>
-                            <td className="product-table_cell">{infoBeerPilsner.phenoles}</td>
-                            <td className="product-table_cell">{infoBeerPilsner.price}</td>
-                          </tr>
+                          {beerMaltsData.map((data) => (
+                            <tr className="product-table_tr" key={data.nameEN}>
+                              <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_cn">{data.nameCN}</h4></th>
+                              <td className="product-table_cell">{data.moisture}</td>
+                              <td className="product-table_cell">{data.ebc}</td>
+                              <td className="product-table_cell">{data.phenoles}</td>
+                              <td className="product-table_cell">{data.price}</td>
+                            </tr>
+                          ))}
                         </tbody>
                       </table>
                     </div>
@@ -273,20 +236,15 @@ function Products() {
                           </tr>
                         </thead>
                         <tbody>
-                          <tr className="product-table_tr">
-                            <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_cn">基础麦芽</h4></th>
-                            <td className="product-table_cell">{infoOemBase.moisture}</td>
-                            <td className="product-table_cell">{infoOemBase.ebc}</td>
-                            <td className="product-table_cell">{infoOemBase.phenoles}</td>
-                            <td className="product-table_cell">{infoOemBase.price}</td>
-                          </tr>
-                          <tr className="product-table_tr">
-                            <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_cn">烟熏麦芽</h4></th>
-                            <td className="product-table_cell">{infoOemSmoke.moisture}</td>
-                            <td className="product-table_cell">{infoOemSmoke.ebc}</td>
-                            <td className="product-table_cell">{infoOemSmoke.phenoles}</td>
-                            <td className="product-table_cell">{infoOemSmoke.price}</td>
-                          </tr>
+                          {oemMaltsData.map((data) => (
+                            <tr className="product-table_tr" key={data.nameEN}>
+                              <th className="product-table_cell product-table_cell_header product-table_cell_type"><h4 className="product-table_cell_type_cn">{data.nameCN}</h4></th>
+                              <td className="product-table_cell">{data.moisture}</td>
+                              <td className="product-table_cell">{data.ebc}</td>
+                              <td className="product-table_cell">{data.phenoles}</td>
+                              <td className="product-table_cell">{data.price}</td>
+                            </tr>
+                          ))}
                         </tbody>
                       </table>
                     </div>
@@ -332,20 +290,15 @@ function Products() {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr className="product-table_tr">
-                        <th className="product-table_cell product-table_cell_header product-table_cell_type product-table_cell_type_jp"><h4>ディスティリング</h4></th>
-                        <td className="product-table_cell ">{infoWhiskyDisitilling.moisture}</td>
-                        <td className="product-table_cell ">{infoWhiskyDisitilling.ebc}</td>
-                        <td className="product-table_cell ">{infoWhiskyDisitilling.phenoles}</td>
-                        <td className="product-table_cell ">{infoWhiskyDisitilling.price}</td>
-                      </tr>
-                      <tr className="product-table_tr">
-                        <th className="product-table_cell product-table_cell_header product-table_cell_type product-table_cell_type_jp"><h4>ライト・ピーテッド</h4></th>
-                        <td className="product-table_cell ">{infoWhiskyPeated.moisture}</td>
-                        <td className="product-table_cell ">{infoWhiskyPeated.ebc}</td>
-                        <td className="product-table_cell ">{infoWhiskyPeated.phenoles}</td>
-                        <td className="product-table_cell ">{infoWhiskyPeated.price}</td>
-                      </tr>
+                      {whiskyMaltsData.map((data) => (
+                        <tr className="product-table_tr" key={data.nameEN}>
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type product-table_cell_type_jp"><h4>{data.nameJP}</h4></th>
+                          <td className="product-table_cell ">{data.moisture}</td>
+                          <td className="product-table_cell ">{data.ebc}</td>
+                          <td className="product-table_cell ">{data.phenoles}</td>
+                          <td className="product-table_cell ">{data.price}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -368,13 +321,15 @@ function Products() {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr className="product-table_tr">
-                        <th className="product-table_cell product-table_cell_header product-table_cell_type product-table_cell_type_jp"><h4>ピルスナー</h4></th>
-                        <td className="product-table_cell ">{infoBeerPilsner.moisture}</td>
-                        <td className="product-table_cell procuct-table_cell_elem_jp">{infoBeerPilsner.ebc}</td>
-                        <td className="product-table_cell ">{infoBeerPilsner.phenoles}</td>
-                        <td className="product-table_cell ">{infoBeerPilsner.price}</td>
-                      </tr>
+                      {beerMaltsData.map((data) => (
+                        <tr className="product-table_tr" key={data.nameEN}>
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type product-table_cell_type_jp"><h4>{data.nameJP}</h4></th>
+                          <td className="product-table_cell ">{data.moisture}</td>
+                          <td className="product-table_cell procuct-table_cell_elem_jp">{data.ebc}</td>
+                          <td className="product-table_cell ">{data.phenoles}</td>
+                          <td className="product-table_cell ">{data.price}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -397,20 +352,15 @@ function Products() {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr className="product-table_tr">
-                        <th className="product-table_cell product-table_cell_header product-table_cell_type product-table_cell_type_jp"><h4>ベース・モルト</h4></th>
-                        <td className="product-table_cell ">{infoOemBase.moisture}</td>
-                        <td className="product-table_cell ">{infoOemBase.ebc}</td>
-                        <td className="product-table_cell ">{infoOemBase.phenoles}</td>
-                        <td className="product-table_cell ">{infoOemBase.price}</td>
-                      </tr>
-                      <tr className="product-table_tr">
-                        <th className="product-table_cell product-table_cell_header product-table_cell_type product-table_cell_type_jp"><h4>スモーク・モルト</h4></th>
-                        <td className="product-table_cell ">{infoOemSmoke.moisture}</td>
-                        <td className="product-table_cell ">{infoOemSmoke.ebc}</td>
-                        <td className="product-table_cell ">{infoOemSmoke.phenoles}</td>
-                        <td className="product-table_cell ">{infoOemSmoke.price}</td>
-                      </tr>
+                      {oemMaltsData.map((data) => (
+                        <tr className="product-table_tr" key={data.nameEN}>
+                          <th className="product-table_cell product-table_cell_header product-table_cell_type product-table_cell_type_jp"><h4>{data.nameJP}</h4></th>
+                          <td className="product-table_cell ">{data.moisture}</td>
+                          <td className="product-table_cell ">{data.ebc}</td>
+                          <td className="product-table_cell ">{data.phenoles}</td>
+                          <td className="product-table_cell ">{data.price}</td>
+                        </tr>
+                      ))}
                     </tbody>
                     <tfoot>
                       <tr>
