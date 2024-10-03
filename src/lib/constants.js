@@ -53,7 +53,7 @@ const infoWhiskyDisitilling = {
   'moisture': '5.0',
   'ebc': '3-5',
   'phenoles': '',
-  'price': '480'
+  'price': '370'
 }
 // Peated | light
 export const infoWhiskyPeatedLight = {
@@ -63,7 +63,7 @@ export const infoWhiskyPeatedLight = {
   'moisture': '5.0',
   'ebc': '3-5',
   'phenoles': '1-5',
-  'price': '515'
+  'price': '380'
 }
 // Peated | medium
 const infoWhiskyPeatedMed = {
@@ -73,7 +73,7 @@ const infoWhiskyPeatedMed = {
   'moisture': '5.0',
   'ebc': '3-5',
   'phenoles': '6-15',
-  'price': '530'
+  'price': '390'
 }
 // Peated | heavy
 const infoWhiskyPeatedHeavy = {
@@ -83,7 +83,7 @@ const infoWhiskyPeatedHeavy = {
   'moisture': '5.0',
   'ebc': '3-5',
   'phenoles': '16-40',
-  'price': '560'
+  'price': '500'
 }
 
 // BEER MALTS
@@ -94,7 +94,7 @@ const infoBeerPilsner = {
   'moisture': '5.0',
   'ebc': '3-5',
   'phenoles': '',
-  'price': '480'
+  'price': '370'
 }
 
 // OEM MALTS
@@ -106,7 +106,7 @@ const infoOemBase = {
   'moisture': '5.0',
   'ebc': '3-10',
   'phenoles': '',
-  'price': '400'
+  'price': '270'
 }
 // Peated | light
 const infoOemPeatedLight = {
@@ -116,7 +116,7 @@ const infoOemPeatedLight = {
   'moisture': '5.0',
   'ebc': '3-10',
   'phenoles': '1-5',
-  'price': '435'
+  'price': '280'
 }
 // Peated | medium
 const infoOemPeatedMed = {
@@ -126,7 +126,7 @@ const infoOemPeatedMed = {
   'moisture': '5.0',
   'ebc': '3-10',
   'phenoles': '6-15',
-  'price': '450'
+  'price': '290'
 }
 // Peated | heavy
 const infoOemPeatedHeavy = {
@@ -136,7 +136,7 @@ const infoOemPeatedHeavy = {
   'moisture': '5.0',
   'ebc': '3-10',
   'phenoles': '16-40',
-  'price': '480'
+  'price': '400'
 }
 // Smoke
 const infoOemSmoked = {
